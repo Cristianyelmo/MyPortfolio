@@ -89,6 +89,7 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
     texto: string;
     Link: string;
     size: number;
+    marco:string
   }
 
   const [valueProject, setValueProject] = useState<Project | null>();
