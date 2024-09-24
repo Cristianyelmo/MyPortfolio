@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Aexir';
+  src: url('/public/Font/Aexir.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+body {
+  background-image: url("/public/Motivo.webp");
+  background-repeat: repeat;
+  background-size: auto;
+  font-family: 'Aexir', sans-serif;
+
+}
+
+
+.glow-text {
+  text-shadow: 0 0 10px rgb(255, 240, 27), 
+               0 0 20px rgba(255, 240, 27, 0.5), 
+               0 0 30px rgba(255, 240, 27, 0.4); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
