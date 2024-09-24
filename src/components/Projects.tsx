@@ -19,7 +19,7 @@ const href = valueProject && valueProject.Link;
         X
       </button>
     </div>
-  <div className="relative border-[3px] border-black glow-effect">
+  <div className="relative  glow-effect p-2">
     <video width="640" height="640" controls autoPlay className="relative z-10">
       <source src={`/${valueProject && valueProject.name}.mp4`} type="video/mp4" />
       Tu navegador no soporta la etiqueta de video.

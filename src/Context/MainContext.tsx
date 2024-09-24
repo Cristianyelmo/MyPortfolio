@@ -3,7 +3,7 @@ import React, { createContext, useContext, ReactNode, useState } from "react";
 interface MainContextType {
   Technologies: Array<{ name: string; image: string }>;
   valueProject:
-    | { name: string; texto: string; Link: string; size: number }
+    | { name: string; texto: string; Link: string; size: number; marco: string }
     | null
     | undefined;
   ArrayProject: Array<{
@@ -11,11 +11,18 @@ interface MainContextType {
     texto: string;
     Link: string;
     size: number;
+    marco: string;
   }>;
   FindProject: (
     name: string
   ) =>
-    | { nombre: string; texto: string; Link: string; size: number }
+    | {
+        nombre: string;
+        texto: string;
+        Link: string;
+        size: number;
+        marco: string;
+      }
     | undefined;
   openModal: boolean;
   setOpenModal: (open: boolean) => void;
@@ -52,24 +59,28 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
       size: 500,
       texto: "fgdfgdfgdgdfgfdgdg",
       Link: "https://manga-lomas.vercel.app/",
+      marco: "marco1-2 (3)",
     },
     {
       name: "Petmaker",
       size: 500,
       texto: "fgdfgdfgdgdfgfdgdg",
       Link: "https://pet-maker.vercel.app/",
+      marco: "marco1-2 (4)",
     },
     {
       name: "The Boys",
       size: 300,
       texto: "fgdfgdfgdgdfgfdgdg",
       Link: "https://the-boys-frontend.vercel.app/",
+      marco: "marco1-2 (2)",
     },
     {
       name: "Intensamente",
       size: 500,
       texto: "fgdfgdfgdgdfgfdgdg",
       Link: "https://intensamente-sable.vercel.app/",
+      marco: "marco1-2 (5)",
     },
   ];
 
