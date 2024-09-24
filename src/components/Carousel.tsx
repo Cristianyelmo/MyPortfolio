@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -8,9 +8,13 @@ import { MainHook } from "../Context/MainContext";
 
 function Carousel() {
     const {FindProject,ArrayProject} =MainHook()
-  const [display, setDisplay] = useState(true);
-  const [width, setWidth] = useState(window.innerWidth < 600 ? 300 :1000);
-  const currentWidth = window.innerWidth;
+
+  const [width, setWidth] = useState<number>();
+const widthResponsive = window.innerWidth
+  
+  useEffect(()=>{
+    setWidth(widthResponsive < 600 ? 300 :1000)
+  },[])
   const settings = {
     dots: true,
     infinite: true,
@@ -25,7 +29,7 @@ function Carousel() {
       <div
         style={{
           width: width + "px",
-          display: display ? "block" : "none"
+         
         }}
       >
         <Slider {...settings}>

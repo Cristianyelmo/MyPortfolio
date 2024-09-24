@@ -1,5 +1,5 @@
 
-import Resizable from "./Carousel";
+
 
 function Contact() {
 

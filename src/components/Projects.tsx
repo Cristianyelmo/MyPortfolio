@@ -6,7 +6,7 @@ const {valueProject,openModal,setOpenModal} = MainHook()
   
 
 console.log(valueProject)
-
+const href = valueProject && valueProject.Link;
   return (
     <div className="overflow-hidden mt-20 md:h-screen w-full relative">
  
@@ -27,7 +27,7 @@ console.log(valueProject)
     
   </div>
   <p className="text-white glow-text w-[640px] breakP">Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadfdsfsdfsdgdsgsdgsdgsdgsdgsdgsgsgsgdsdetrersterteteteyeyeyreyeyertetet</p>
-  <a className="bg-black text-white p-3" target="_blank" href={valueProject && valueProject.Link}>Ver Demo</a>
+  <a className="bg-black text-white p-3" target="_blank"   href={href || (valueProject ? valueProject.Link : "#")}>Ver Demo</a>
 </div> }
     
 
