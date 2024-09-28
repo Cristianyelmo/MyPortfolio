@@ -40,12 +40,12 @@ export default function Modelsx() {
           const ambientLight = new THREE.AmbientLight(0xffffff, 4); // Lower intensity
           scene.add(ambientLight);
 
-          const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
+         /*  const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
           directionalLight.position.set(1, 1, 1).normalize();
           scene.add(directionalLight);
 
           const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 4);
-          scene.add(hemiLight);
+          scene.add(hemiLight); */
 
           if (gltf.animations && gltf.animations.length > 0) {
             const mixer = new THREE.AnimationMixer(model);
@@ -71,18 +71,19 @@ export default function Modelsx() {
       function animate() {
         const delta = clock.current.getDelta();
         console.log(mixersRef.current)
-        mixersRef.current.forEach((mixer) => mixer.update(delta)); // Actualizar mixers
+        mixersRef.current.forEach((mixer) => mixer.update(delta)); 
 
         renderer.render(scene, camera);
-        requestAnimationFrame(animate);
+        renderer.setAnimationLoop(animate);
       }
 
       animate();
 
       
       return () => {
+        renderer.setAnimationLoop(null);
+        container && container.removeChild(renderer.domElement);
         renderer.dispose();
-        if (container) container.removeChild(renderer.domElement);
       };
     }
   }, [clipname]);
