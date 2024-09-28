@@ -7,7 +7,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Modelsx from "./components/Chibi";
 import { MainHook } from "./Context/MainContext";
-import { useEffect, useRef } from "react";
+import { useEffect} from "react";
 import Typewriter from "./components/Typewriter";
 
 function App() {

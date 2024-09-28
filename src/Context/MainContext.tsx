@@ -26,7 +26,7 @@ interface MainContextType {
     | undefined;
   openModal: boolean;
   setOpenModal: (open: boolean) => void;
-  textChibi:String;
+  textChibi:string;
   setTextchibi: (open: string) => void;
   clipname:string;
   playText:boolean;
