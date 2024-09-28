@@ -1,12 +1,21 @@
 import { MainHook } from "../Context/MainContext";
+import { useEffect } from "react";
+import useIsVisible from '../hooks/useIsVisible';
 
 
 function Technologies() {
 
-const {Technologies} = MainHook()
+const {Technologies,setTextchibi} = MainHook()
+const [isVisible, elementRef] = useIsVisible();
 
+useEffect(() => {
+  if (isVisible) {
+    console.log("El componente Contacto está visible en pantalla");
+    setTextchibi('aca esta las tecnologias que conozco,quisiera en un futuro aprender mas sobre JAVA y sobre la Programacion orientadas a objetos porque javascript es Programacion funcional para tener otra panorama')
+  }
+}, [isVisible]);
   return (
-    <div className="overflow-hidden  w-full">
+    <div ref={elementRef} className="overflow-hidden  w-full">
   
 
 <h1 className="text-white glow-text text-center text-4xl">Tecnologias</h1>

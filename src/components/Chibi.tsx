@@ -1,18 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import * as THREE from "three";
 import { MainHook } from "../Context/MainContext";
 
 export default function Modelsx() {
   const modelRef = useRef(null);
-  const mixersRef = useRef([]); 
+  const mixersRef = useRef<THREE.AnimationMixer[]>([]); 
   const glbRef = useRef(null);
   const clock = useRef(new THREE.Clock());
-  const [loading, setLoading] = useState(true);
-  const [loadProgress, setLoadProgress] = useState(0);
-  const containerRef = useRef(null);
-const  {clipname,setClipname,Playbutton,playText} =MainHook()
+
+  const  {clipname,setClipname,playText,textChibi,isVisible, setIsVisible} =MainHook()
+  const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const scene = new THREE.Scene();
@@ -20,8 +18,8 @@ const  {clipname,setClipname,Playbutton,playText} =MainHook()
       const renderer = new THREE.WebGLRenderer({ alpha: true });
 
       const container = containerRef.current;
-      const width = container && container.clientWidth;
-      const height = container && container.clientHeight;
+      const width = container?.clientWidth ?? window.innerWidth;
+      const height = container?.clientHeight ?? window.innerHeight;;
 
       renderer.setSize(width, height);
       container && container.appendChild(renderer.domElement);
@@ -51,7 +49,7 @@ const  {clipname,setClipname,Playbutton,playText} =MainHook()
 
           if (gltf.animations && gltf.animations.length > 0) {
             const mixer = new THREE.AnimationMixer(model);
-            gltf.animations.forEach((clip,index) => {
+            gltf.animations.forEach((clip:any) => {
             
          if(clip.name == clipname){
              const action = mixer.clipAction(clip);
@@ -63,20 +61,16 @@ const  {clipname,setClipname,Playbutton,playText} =MainHook()
             mixersRef.current.push(mixer);
           }
 
-          setLoading(false);
+        
         },
-        function (xhr) {
-          const percentComplete = (xhr.loaded / xhr.total) * 100;
-          setLoadProgress(Math.round(percentComplete));
-        },
-        function (error) {
-          console.error(error);
-        }
+        
+        
       );
 
       // Animar la escena
       function animate() {
         const delta = clock.current.getDelta();
+        console.log(mixersRef.current)
         mixersRef.current.forEach((mixer) => mixer.update(delta)); // Actualizar mixers
 
         renderer.render(scene, camera);
@@ -95,9 +89,31 @@ const  {clipname,setClipname,Playbutton,playText} =MainHook()
 
 
 
+  
+  useEffect((
+    
+      
+  )=>{
+    let lengthText = textChibi.length
+    let timeoutId:any;
+    if(playText){
+      timeoutId= setTimeout(() => {
+       
+        setClipname('Move01')
+      }, (lengthText * 50) + 2000);
+      } 
 
 
-  const [isVisible, setIsVisible] = useState(false);
+
+      return () => {
+        clearTimeout(timeoutId);
+      };
+
+  },[playText])
+
+
+
+
 
 
   useEffect(() => {
@@ -143,8 +159,7 @@ const  {clipname,setClipname,Playbutton,playText} =MainHook()
         </button>
       )}
     </div>
-    <button className="bg-black text-white" onClick={()=>Playbutton()}>{!playText ? 'play' : 'stop'}</button>
-{/*       <button className="bg-black text-white" onClick={()=>setClipname('Move02.001')}>hoola</button> */}
+   
     </div>
   );
 }

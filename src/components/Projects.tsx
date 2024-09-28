@@ -5,11 +5,13 @@ import { useEffect } from "react";
 function Projects() {
   const [isVisible, elementRef] = useIsVisible();
 const {valueProject,openModal,setOpenModal} = MainHook()
- const {setTextchibi} = MainHook()
+ const {setTextchibi,playText} = MainHook()
 useEffect(() => {
   if (isVisible) {
     console.log("El componente Contacto está visible en pantalla");
-    setTextchibi('buenas cabros fsgsgsgsgsdgsfgfsgdfgdfhfdhdfhdfhdfhdfhdfhdfhdfhdfhdfhfdhfdhdfhfdhdhfdhdfh')
+    if(!playText){
+    setTextchibi('esta parte es de mi proyectos,estan subidos desde Vercel,me enfoque que sea para portfolio asi que no tiene registro ni inicio de sesion')
+  }
   }
 }, [isVisible]);
 

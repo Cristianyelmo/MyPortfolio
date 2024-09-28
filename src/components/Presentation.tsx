@@ -1,13 +1,22 @@
 
 
-
+import useIsVisible from '../hooks/useIsVisible';
+import { MainHook } from "../Context/MainContext";
+import { useEffect } from 'react';
 function Presentation() {
 
-
+  const [isVisible, elementRef] = useIsVisible();
+  const {setTextchibi} = MainHook()
+  useEffect(() => {
+    if (isVisible) {
+      console.log("El componente Contacto está visible en pantalla");
+      setTextchibi('hola como estan mi nombre es mono,y voy a mostrarte cada detalle de mi portfolio')
+    }
+  }, [isVisible]);
 
 
   return (
-    <div className="overflow-hidden h-screen  w-full">
+    <div ref={elementRef}  className="overflow-hidden h-screen  w-full">
   
 
 <section className="text-white glow-text mt-20 text-xl relative ">

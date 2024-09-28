@@ -33,6 +33,8 @@ interface MainContextType {
   setPlayText :(open: boolean) => void;
   setClipname:(open: string) => void;
   Playbutton: () => void;
+  isVisible:boolean;
+  setIsVisible:(open: boolean) => void;
 }
 export const MainContext = createContext<MainContextType | null>(null);
 export const MainHook = () => {
@@ -121,8 +123,8 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
 
 const [playText,setPlayText]= useState(false);
 
-
-
+console.log(playText)
+const [isVisible, setIsVisible] = useState(false);
 const Playbutton = ()=>{
 
   setPlayText(prevState => !prevState);
@@ -130,16 +132,18 @@ const Playbutton = ()=>{
 
   if(!playText){
   setClipname('Move02.001')
+  setIsVisible(false)
 }else{
+
   setClipname('Move01')
 }
 
-if(!playText){
+/*  if(!playText){
 setTimeout(() => {
-  setPlayText(false)
+ 
   setClipname('Move01')
-}, 11000);
-}
+}, (209 * 50) + 2200);
+}  */
 
 
 }
@@ -158,7 +162,7 @@ setTimeout(() => {
         textChibi,setTextchibi,
         clipname,setClipname,
         playText,setPlayText,
-        Playbutton
+        Playbutton,isVisible, setIsVisible
       }}
     >
       {children}

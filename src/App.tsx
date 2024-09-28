@@ -7,63 +7,59 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Modelsx from "./components/Chibi";
 import { MainHook } from "./Context/MainContext";
-
+import { useEffect, useRef } from "react";
+import Typewriter from "./components/Typewriter";
 
 function App() {
- 
-  
+  const { textChibi, playText, Playbutton, setPlayText,setClipname } = MainHook();
 
-  const {textChibi,playText} =MainHook()
+  const body = document.body;
 
-  const text = textChibi;
-  const letterCount = text.split('').length;
-console.log(letterCount)
+  useEffect(() => {
+    let timeoutId;
 
-  const keyframes = `
-  .animate-writting${letterCount}{
-  display: block;
-  white-space: nowrap;
-  width: ${letterCount}ch;
-  animation:escribiendo${letterCount} 10s steps(${letterCount}),
-            parpadeo${letterCount} 0.4s infinite alternate;
-  overflow: hidden;
-  border-right:3px solid
-}
+    timeoutId = setTimeout(() => {
+      setPlayText(true);
+      setClipname('Move02.001')
+    }, 500);
 
-@keyframes escribiendo${letterCount} {
-  from{
-    width: 0;
-  }
-  
-}
-
-@keyframes parpadeo${letterCount}{
-  70%{
-    border-color: transparent;
-  }
-}`
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+  useEffect(() => {
+    if (playText) {
+      body.classList.add("overflow-y-hidden");
+    } else {
+      body.classList.remove("overflow-y-hidden");
+    }
+  }, [playText]);
 
   return (
-    <div>
-      <style>
+    <div className={``}>
+      {/*  <style>
 {keyframes}
-      </style>
-     <Header/>
-      <Modelsx/>
-      {playText && <div className=" breakP bg-black text-white w-[100px] h-[100px] fixed bottom-4 z-50">
-   <span className={`animate-writting${letterCount}`}>{textChibi}</span>
-      </div>}
+      </style> */}
+      <Header />
+      <Modelsx />
+      <button
+        className="index-button bg-black text-white fixed bottom-4 right-4"
+        onClick={() => Playbutton()}
+      >
+        {!playText ? "play" : "stop"}
+      </button>
+      {playText && (
+        <div className="breakP z-20 bg-black/60 text-white max-w-[900px] min-h-[100px] p-4 fixed bottom-4 z-50 ">
+          {playText && <Typewriter text={textChibi} speed={50} />}
+        </div>
+      )}
 
       <Presentation />
-      <AboutMe/>
-      <Technologies/>
-      <Projects/>
-      <Contact/>
+      <AboutMe />
+      <Technologies />
+      <Projects />
+      <Contact />
     </div>
-  
-      
-   
-
   );
 }
 

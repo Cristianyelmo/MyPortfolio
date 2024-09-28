@@ -7,7 +7,7 @@ function AboutMe() {
   useEffect(() => {
     if (isVisible) {
       console.log("El componente Contacto está visible en pantalla");
-      setTextchibi('buenas conchetumare')
+      setTextchibi('esta parte habla sobre mi,aunque tengo conocimiento de fullstack muchos dicen que tengo mucho mas de frontend que de backend')
     }
   }, [isVisible]);
 
