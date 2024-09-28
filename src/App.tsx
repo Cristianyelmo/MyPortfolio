@@ -11,7 +11,7 @@ import { useEffect} from "react";
 import Typewriter from "./components/Typewriter";
 
 function App() {
-  const { textChibi, playText, Playbutton, setPlayText,setClipname } = MainHook();
+  const { textChibi, playText, Playbutton, setPlayText,setClipname,isVisible,scrollToTop } = MainHook();
 
   const body = document.body;
 
@@ -42,12 +42,27 @@ function App() {
       </style> */}
       <Header />
       <Modelsx />
-      <button
-        className="index-button bg-black text-white fixed bottom-4 right-4"
-        onClick={() => Playbutton()}
-      >
-        {!playText ? "play" : "stop"}
-      </button>
+      <div  className="index-button flex flex-col space-y-4 text-white p-3 fixed bottom-4 right-4">
+      
+
+
+      {isVisible && (
+        <button className="p-4 bg-black/50 rounded-full"
+          onClick={scrollToTop}
+         
+        >
+          ↑
+        </button>
+      
+      )}
+
+<button className="bg-black text-white p-1 "
+       
+       onClick={() => Playbutton()}
+     >
+       {!playText ? "play" : "stop"}
+     </button>
+        </div>
       {playText && (
         <div className="breakP z-20 bg-black/60 text-white max-w-[900px] min-h-[100px] p-4 fixed bottom-4 z-50 ">
           {playText && <Typewriter text={textChibi} speed={50} />}

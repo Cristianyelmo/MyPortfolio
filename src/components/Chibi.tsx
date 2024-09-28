@@ -151,14 +151,14 @@ export default function Modelsx() {
       <div ref={containerRef} className={`w-[150px] h-[150px] md:w-[300px] md:h-[300px]`}></div>
 
       <div>
-      {isVisible && (
+     {/*  {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-10 right-10 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition"
+          className="fixed bottom-10 right-10 bg-black/50 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition"
         >
           ↑
         </button>
-      )}
+      )} */}
     </div>
    
     </div>

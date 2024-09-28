@@ -38,11 +38,12 @@ function Contact() {
 
     <img src="/TV.webp" alt="" className="z-20" />
     <div className="flex flex-col self-center z-20">
-    <div className="bg-black/50 p-4 text-white text-center glow-text mb-10">Descargar CV</div>
+    <a target="__blank" href="/Amarilla-Cristian-CV-Desarrollo-web full-stack (2).pdf" className="bg-black/50 p-4 text-white text-center glow-text mb-10">Descargar CV</a>
     <div className="flex ">
-    <img src="/Linkedin.webp" alt="" className="w-[100px] h-[100px] md:w-[200px] md:h-[200px]"/>
-    <img src="/Behance.webp" alt="" className="w-[100px] h-[100px] md:w-[200px] md:h-[200px]"/>
-    <img src="/Github.webp" alt="" className="w-[100px] h-[100px] md:w-[200px] md:h-[200px]"/>
+      <a href="https://www.linkedin.com/in/amarillacristian/" target="__blank"><img src="/Linkedin.webp" alt="" className="w-[80px] h-[80px] md:w-[200px] md:h-[200px]"/></a>
+      <a href="https://www.behance.net/cristiaamarill" target="__blank"><img src="/Behance.webp" alt="" className="w-[80px] h-[80px] md:w-[200px] md:h-[200px]"/></a>    
+    <a href="https://github.com/Cristianyelmo" target="__blank"><img src="/Github.webp" alt="" className="w-[80px] h-[80px] md:w-[200px] md:h-[200px]"/></a>
+    
     
     </div>
     </div>

@@ -20,7 +20,7 @@ const href = valueProject && valueProject.Link;
   return (
     <div ref={elementRef} className="overflow-hidden mt-20 md:h-screen w-full relative">
  
-{ openModal && <div className="fixed inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 z-50">
+{ openModal && <div className="fixed inset-0 flex flex-col space-y-4 items-center justify-center bg-black bg-opacity-70 z-50">
  <div className="flex justify-end">
       <button
         onClick={() => setOpenModal(false)} 
@@ -34,9 +34,15 @@ const href = valueProject && valueProject.Link;
       <source src={`/${valueProject && valueProject.name}.mp4`} type="video/mp4" />
       Tu navegador no soporta la etiqueta de video.
     </video>
-    
+  
   </div>
-  <p className="text-white glow-text max-w-[640px] breakP">Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadfdsfsdfsdgdsgsdgsdgsdgsdgsdgsgsgsgdsdetrersterteteteyeyeyreyeyertetet</p>
+  <div className="flex">
+  {valueProject && valueProject.tecnologias.map((item)=>(
+    <img src={`${item}.webp`} alt="" width={50} height={50}/>
+  ))}
+
+  </div>
+  <p className="text-white glow-text max-w-[640px] breakP text-center">{valueProject?.texto}</p>
   <a className="bg-black text-white p-3" target="_blank"   href={href || (valueProject ? valueProject.Link : "#")}>Ver Demo</a>
 </div> }
     
