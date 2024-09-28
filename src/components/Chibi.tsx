@@ -9,7 +9,7 @@ export default function Modelsx() {
   const glbRef = useRef(null);
   const clock = useRef(new THREE.Clock());
 
-  const  {clipname,setClipname,playText,textChibi,isVisible, setIsVisible} =MainHook()
+  const  {clipname,setClipname,playText,textChibi, setIsVisible} =MainHook()
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -138,14 +138,7 @@ export default function Modelsx() {
   }, []);
 
  
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', 
-    });
-
-    setClipname('Move01.002')
-  };
+  
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <div ref={containerRef} className={`w-[150px] h-[150px] md:w-[300px] md:h-[300px]`}></div>
