@@ -1,14 +1,22 @@
 import { MainHook } from "../Context/MainContext";
 import Resizable from "./Carousel";
-
+import useIsVisible from '../hooks/useIsVisible';
+import { useEffect } from "react";
 function Projects() {
+  const [isVisible, elementRef] = useIsVisible();
 const {valueProject,openModal,setOpenModal} = MainHook()
-  
+ const {setTextchibi} = MainHook()
+useEffect(() => {
+  if (isVisible) {
+    console.log("El componente Contacto está visible en pantalla");
+    setTextchibi('buenas cabros fsgsgsgsgsdgsfgfsgdfgdfhfdhdfhdfhdfhdfhdfhdfhdfhdfhdfhfdhfdhdfhfdhdhfdhdfh')
+  }
+}, [isVisible]);
 
 console.log(valueProject)
 const href = valueProject && valueProject.Link;
   return (
-    <div className="overflow-hidden mt-20 md:h-screen w-full relative">
+    <div ref={elementRef} className="overflow-hidden mt-20 md:h-screen w-full relative">
  
 { openModal && <div className="fixed inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 z-50">
  <div className="flex justify-end">
@@ -26,7 +34,7 @@ const href = valueProject && valueProject.Link;
     </video>
     
   </div>
-  <p className="text-white glow-text w-[640px] breakP">Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadfdsfsdfsdgdsgsdgsdgsdgsdgsdgsgsgsgdsdetrersterteteteyeyeyreyeyertetet</p>
+  <p className="text-white glow-text max-w-[640px] breakP">Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadfdsfsdfsdgdsgsdgsdgsdgsdgsdgsgsgsgdsdetrersterteteteyeyeyreyeyertetet</p>
   <a className="bg-black text-white p-3" target="_blank"   href={href || (valueProject ? valueProject.Link : "#")}>Ver Demo</a>
 </div> }
     

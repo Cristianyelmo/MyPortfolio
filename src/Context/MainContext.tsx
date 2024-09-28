@@ -26,6 +26,13 @@ interface MainContextType {
     | undefined;
   openModal: boolean;
   setOpenModal: (open: boolean) => void;
+  textChibi:String;
+  setTextchibi: (open: string) => void;
+  clipname:string;
+  playText:boolean;
+  setPlayText :(open: boolean) => void;
+  setClipname:(open: string) => void;
+  Playbutton: () => void;
 }
 export const MainContext = createContext<MainContextType | null>(null);
 export const MainHook = () => {
@@ -107,6 +114,38 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
 
   const [openModal, setOpenModal] = useState<boolean>(false);
 
+  const [textChibi,setTextchibi]= useState<string>('Hola como estannnnn');
+
+
+  const [clipname,setClipname] = useState('Move01')
+
+const [playText,setPlayText]= useState(false);
+
+
+
+const Playbutton = ()=>{
+
+  setPlayText(prevState => !prevState);
+
+
+  if(!playText){
+  setClipname('Move02.001')
+}else{
+  setClipname('Move01')
+}
+
+if(!playText){
+setTimeout(() => {
+  setPlayText(false)
+  setClipname('Move01')
+}, 11000);
+}
+
+
+}
+
+
+
   return (
     <MainContext.Provider
       value={{
@@ -116,6 +155,10 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
         ArrayProject,
         openModal,
         setOpenModal,
+        textChibi,setTextchibi,
+        clipname,setClipname,
+        playText,setPlayText,
+        Playbutton
       }}
     >
       {children}
