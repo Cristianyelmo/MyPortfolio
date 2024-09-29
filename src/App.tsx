@@ -38,14 +38,12 @@ function App() {
 
   return (
     <div className={``}>
-      {/*  <style>
-{keyframes}
-      </style> */}
-
-      <Modelsx />
-      <div  className="index-button flex flex-col space-y-4 text-white p-3 fixed bottom-4 right-4">
+   
+  <Modelsx />
       
-
+      <div  className="flex index-button flex-col space-y-4 text-white p-3 fixed bottom-4 right-4">
+      
+    
 
       {isVisible && (
         <button className="p-4 bg-black/50 rounded-full"
@@ -57,7 +55,7 @@ function App() {
       
       )}
 
-<button className="bg-black text-white p-1 "
+<button className="bg-black text-white p-1 z-50"
        
        onClick={() => Playbutton()}
      >
@@ -65,7 +63,7 @@ function App() {
      </button>
         </div>
       {playText && (
-        <div className="breakP z-20 bg-black/60 text-white max-w-[900px] min-h-[100px] p-4 fixed bottom-4 z-50 ">
+        <div className="breakP z-50 bg-black/60 text-white max-w-[900px] min-h-[100px] p-4 fixed  bottom-4  ">
           {playText && <Typewriter text={textChibi} speed={50} />}
         </div>
       )}

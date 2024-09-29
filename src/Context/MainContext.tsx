@@ -154,12 +154,7 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
       setClipname(6);
     }
 
-    /*  if(!playText){
-setTimeout(() => {
- 
-  setClipname('Move01')
-}, (209 * 50) + 2200);
-}  */
+    
 
 
 

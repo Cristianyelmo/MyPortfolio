@@ -40,12 +40,7 @@ export default function Modelsx() {
           const ambientLight = new THREE.AmbientLight(0xffffff, 4); // Lower intensity
           scene.add(ambientLight);
 
-         /*  const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
-          directionalLight.position.set(1, 1, 1).normalize();
-          scene.add(directionalLight);
-
-          const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 4);
-          scene.add(hemiLight); */
+    
 
           if (gltf.animations && gltf.animations.length > 0) {
             const mixer = new THREE.AnimationMixer(model);
@@ -65,7 +60,7 @@ export default function Modelsx() {
         
       );
 
-      // Animar la escena
+      
       function animate() {
         const delta = clock.current.getDelta();
         
@@ -141,16 +136,7 @@ export default function Modelsx() {
     <div className="fixed bottom-4 right-4 z-50">
       <div ref={containerRef} className={`w-[150px] h-[150px] md:w-[300px] md:h-[300px]`}></div>
 
-      <div>
-     {/*  {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-10 right-10 bg-black/50 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition"
-        >
-          ↑
-        </button>
-      )} */}
-    </div>
+    
    
     </div>
   );

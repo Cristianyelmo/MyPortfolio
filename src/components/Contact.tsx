@@ -15,7 +15,7 @@ function Contact() {
   }, [isVisible]);
 
   return (
-    <div ref={elementRef} className=" mt-20 h-screen w-full">
+    <div ref={elementRef} className=" mt-20 h-screen w-full content-center">
       <h1 className="text-white glow-text text-center text-4xl">Contacto</h1>
 
       <div className="relative md:top-[-30%] z-10">
@@ -34,7 +34,7 @@ function Contact() {
         />
       </div>
       <div className="flex flex-col md:justify-center md:flex-row   z-20">
-        <img src="/b.gif" alt="" className="z-20" />
+        <img src="/a.gif" alt="" className="z-20" />
 
         <div className="flex flex-col self-center z-20">
           <a
