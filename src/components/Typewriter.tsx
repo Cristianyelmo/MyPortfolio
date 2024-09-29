@@ -6,7 +6,7 @@ interface TypewriterProps {
 const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 50 }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
-console.log(text.length)
+
   useEffect(() => {
     if (index < text.length) {
       const timeout = setTimeout(() => {

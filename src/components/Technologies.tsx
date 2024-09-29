@@ -15,7 +15,7 @@ useEffect(() => {
   }
 }, [isVisible]);
   return (
-    <div ref={elementRef} className="overflow-hidden h-screen w-full">
+    <div ref={elementRef} className="overflow-hidden  w-full">
   
 
 <h1 className="text-white glow-text text-center text-4xl">Tecnologias</h1>
