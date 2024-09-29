@@ -15,22 +15,22 @@ function Contact() {
   }, [isVisible]);
 
   return (
-    <div ref={elementRef} className="overflow-hidden mt-20 h-screen w-full">
+    <div ref={elementRef} className=" mt-20 h-screen w-full">
       <h1 className="text-white glow-text text-center text-4xl">Contacto</h1>
 
       <div className="relative md:top-[-30%] z-10">
         <img
-          src="/cloud.png"
-          alt=""
-          className="absolute z-10 left-[50%] top-[-120%]"
+          src="/cloud2.webp"
+          alt=""width={600}
+          className="absolute z-10 right-0 top-[-50%]"
         />
       </div>
 
       <div className="relative md:top-[-30%] z-10">
         <img
-          src="/cloud.png"
+          src="/cloud1.webp" width={600}
           alt=""
-          className="absolute z-10 right-[50%] top-[-120%]"
+          className="absolute z-10 left-0 top-[-50%]"
         />
       </div>
       <div className="flex flex-col md:justify-center md:flex-row   z-20">

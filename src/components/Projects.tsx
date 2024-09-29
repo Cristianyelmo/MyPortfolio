@@ -21,7 +21,7 @@ const href = valueProject && valueProject.Link;
 
 const isGrid = valueProject?.tecnologias.length && valueProject?.tecnologias.length > 7;
   return (
-    <div ref={elementRef} className="overflow-hidden mt-20 md:h-screen w-full relative">
+    <div ref={elementRef} className=" mt-20 md:h-screen w-full relative">
  
 { openModal && <div className="fixed inset-0 flex flex-col space-y-4 items-center justify-center bg-black bg-opacity-70 z-50">
  <div className="flex justify-end">
@@ -56,14 +56,14 @@ const isGrid = valueProject?.tecnologias.length && valueProject?.tecnologias.len
 <h1 className="text-white glow-text text-center text-4xl">Proyectos</h1>
 
 <div className="relative md:top-[-30%]">
-<img src="/cloud.png" alt="" className="absolute z-10 left-[50%] top-[-120%]" />
+<img src="/cloud2.webp" width={600} alt="" className="absolute z-10 right-0 top-[-70%]" />
 
 </div>
 
 
 <div className="relative md:top-[-20%]">
 
-<img src="/cloud.png" alt="" className="absolute z-10 right-[60%] top-[-120%]" />
+<img src="/cloud1.webp" alt="" className="absolute z-10 right-[60%] top-[-120%]" />
 </div>
 
 <div className="flex justify-center mt-10 z-20">

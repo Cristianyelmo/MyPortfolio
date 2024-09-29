@@ -12,12 +12,12 @@ function AboutMe() {
   }, [isVisible]);
 
   return (
-    <div   ref={elementRef} className="overflow-hidden h-screen w-full relative">
+    <div   ref={elementRef} className=" h-screen w-full relative">
 
 
 <h1 className="text-white glow-text text-center text-4xl">Sobre mi</h1>
 <section className="flex md:justify-center flex-col md:flex-row items-center relative">
-<img src="/cloud.png" alt="" className="absolute z-10 left-[50%] md:top-[-20%]" />
+<img src="/cloud2.webp" width={700} alt="" className="absolute z-10 right-0 md:top-0" />
 
 <div className="relative">
 <img src="/marco.webp" alt="" width={453} height={600}  className="absolute z-20 w-[453px] " />

@@ -16,7 +16,7 @@ function Presentation() {
 
 
   return (
-    <div ref={elementRef}  className="overflow-hidden h-screen  w-full">
+    <div ref={elementRef}  className="h-screen  w-full">
   
 
 <section className="text-white glow-text mt-20 text-xl relative ">
@@ -29,8 +29,8 @@ function Presentation() {
 
 
 
-<img src="/cloud.png" alt="" className="absolute z-10 left-[50%] top-[-150%]" />
-<img src="/cloud.png" alt="" className="absolute z-10 right-[60%] top-[-120%]" />
+<img src="/cloud2.webp" alt="" width={600} className="absolute z-10 right-0 top-0" />
+<img src="/cloud1.webp" alt="" width={600} className="absolute z-10 left-0 top-0" />
 
 <div className="relative ml-10 top-[150px] md:top-0">
    
