@@ -10,7 +10,7 @@ import { useEffect} from "react";
 import Typewriter from "./components/Typewriter";
 
 function App() {
-  const { textChibi, playText, Playbutton, setPlayText,setClipname,isVisible,scrollToTop } = MainHook();
+  const { textChibi, playText, Playbutton, setPlayText,setClipname,isVisible, setIsVisible,scrollToTop } = MainHook();
 
   const body = document.body;
 
@@ -19,7 +19,9 @@ function App() {
 
     timeoutId = setTimeout(() => {
       setPlayText(true);
-      setClipname(10)
+      setClipname(10);
+      setIsVisible(false)
+     
     }, 500);
 
     return () => {

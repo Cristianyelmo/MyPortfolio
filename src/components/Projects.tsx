@@ -17,6 +17,9 @@ useEffect(() => {
 
 console.log(valueProject)
 const href = valueProject && valueProject.Link;
+
+
+const isGrid = valueProject?.tecnologias.length && valueProject?.tecnologias.length > 7;
   return (
     <div ref={elementRef} className="overflow-hidden mt-20 md:h-screen w-full relative">
  
@@ -36,10 +39,13 @@ const href = valueProject && valueProject.Link;
     </video>
   
   </div>
-  <div className="flex">
-  {valueProject && valueProject.tecnologias.map((item)=>(
+  <div className={`${isGrid ? 'grid grid-cols-7' : 'flex'}`}>
+  {valueProject && valueProject.tecnologias.map((item,index)=>(
+    <div  key={index} className="grid-item">
     <img src={`${item}.webp`} alt="" width={50} height={50}/>
+    </div>
   ))}
+  
 
   </div>
   <p className="text-white glow-text max-w-[640px] breakP text-center">{valueProject?.texto}</p>

@@ -68,6 +68,11 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
     { name: "Prisma", image: "/Prisma.webp" },
     { name: "Tailwind CSS", image: "/Tailwind CSS.webp" },
     { name: "Postman", image: "/Postman.webp" },
+    { name: "React Js", image: "/React.webp" },
+    { name: "Node Js", image: "/NodeJs.webp" },
+    { name: "Figma", image: "/Figma.webp" },
+    { name: "Next Js", image: "/Next Js.webp" },
+    { name: "PHP", image: "/PHP.webp" }
   ];
 
   const ArrayProject = [
@@ -78,7 +83,7 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
         "Manga Lomas es un ecommerce con estetica de manga e anime,es un proyecto que tiene una base de datos Postgresql con Prisma y React de Frontend ",
       Link: "https://manga-lomas.vercel.app/",
       marco: "marco1-2 (3)",
-      tecnologias: ["Javascript", "Firebase", "MySQL", "Postgresql", "Postman"],
+      tecnologias: ["Javascript","React", "Postgresql", "Postman","NodeJs","Figma","Next Js"]
     },
     {
       name: "Petmaker",
@@ -86,7 +91,7 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
       texto: "Pet Maker es un proyecto donde podes crear una mascota y ponerle accesorios,color,anteojos,remera y nombre,esta hecho con Next JS usando la base de datos de FireBase NoSQL",
       Link: "https://pet-maker.vercel.app/",
       marco: "marco1-2 (4)",
-      tecnologias: ["Javascript", "Firebase", "MySQL", "Postgresql", "Postman"],
+      tecnologias: ["Javascript", "Firebase","React","NodeJs","Next Js"]
     },
     {
       name: "The Boys",
@@ -94,7 +99,7 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
       texto: "The Boys es una landing donde podes elegir a los personaje de la serie y ver sus detalles y la diferencia de los comic y la serie",
       Link: "https://the-boys-frontend.vercel.app/",
       marco: "marco1-2 (2)",
-      tecnologias: ["Javascript", "Firebase", "MySQL", "Postgresql", "Postman"],
+      tecnologias: ["Javascript","React","Next Js"]
     },
     {
       name: "Intensamente",
@@ -102,7 +107,7 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
       texto: "Intensamente es un proyecto inspirado en la pelicula donde te podes sacar fotomatones y te detecta la emocion de tu rostro,esta hecha con la API de IA Face API",
       Link: "https://intensamente-sable.vercel.app/",
       marco: "marco1-2 (5)",
-      tecnologias: ["Javascript", "Firebase", "MySQL"],
+      tecnologias: ["Javascript","React","Figma"]
     },
   ];
 
