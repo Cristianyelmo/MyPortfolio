@@ -35,10 +35,10 @@ interface MainContextType {
   setOpenModal: (open: boolean) => void;
   textChibi: string;
   setTextchibi: (open: string) => void;
-  clipname: string;
+  clipname: number;
   playText: boolean;
   setPlayText: (open: boolean) => void;
-  setClipname: (open: string) => void;
+  setClipname: (open: number) => void;
   Playbutton: () => void;
   isVisible: boolean;
   setIsVisible: (open: boolean) => void;
@@ -132,7 +132,7 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
 
   const [textChibi, setTextchibi] = useState<string>("Hola como estannnnn");
 
-  const [clipname, setClipname] = useState("Move01");
+  const [clipname, setClipname] = useState(6);
 
   const [playText, setPlayText] = useState(false);
 
@@ -142,10 +142,10 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
     setPlayText((prevState) => !prevState);
 
     if (!playText) {
-      setClipname("Move02.001");
+      setClipname(10);
       setIsVisible(false);
     } else {
-      setClipname("Move01");
+      setClipname(6);
     }
 
     /*  if(!playText){
@@ -170,7 +170,7 @@ setTimeout(() => {
       behavior: 'smooth', 
     });
   
-    setClipname('Move01.002')
+    setClipname(5)
   };
 
   return (

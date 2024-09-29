@@ -20,7 +20,7 @@ function App() {
 
     timeoutId = setTimeout(() => {
       setPlayText(true);
-      setClipname('Move02.001')
+      setClipname(10)
     }, 500);
 
     return () => {

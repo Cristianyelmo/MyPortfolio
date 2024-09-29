@@ -49,13 +49,11 @@ export default function Modelsx() {
 
           if (gltf.animations && gltf.animations.length > 0) {
             const mixer = new THREE.AnimationMixer(model);
-            gltf.animations.forEach((clip:any) => {
-            
-         if(clip.name == clipname){
-             const action = mixer.clipAction(clip);
+           
+             const action = mixer.clipAction(gltf.animations[clipname]);
               action.play(); 
-            }
-            });
+          
+         
  
 
             mixersRef.current.push(mixer);
@@ -70,7 +68,7 @@ export default function Modelsx() {
       // Animar la escena
       function animate() {
         const delta = clock.current.getDelta();
-        console.log(mixersRef.current)
+        
         mixersRef.current.forEach((mixer) => mixer.update(delta)); 
 
         renderer.render(scene, camera);
@@ -100,8 +98,8 @@ export default function Modelsx() {
     if(playText){
       timeoutId= setTimeout(() => {
        
-        setClipname('Move01')
-      }, (lengthText * 50) + 2000);
+        setClipname(6)
+      }, (lengthText * 50) + 1500);
       } 
 
 
@@ -127,7 +125,7 @@ export default function Modelsx() {
 
 
       if (window.scrollY === 0) {
-        setClipname('Move01')
+        setClipname(6)
       }
     };
 
