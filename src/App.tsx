@@ -40,7 +40,7 @@ function App() {
       {/*  <style>
 {keyframes}
       </style> */}
-      <Header />
+
       <Modelsx />
       <div  className="index-button flex flex-col space-y-4 text-white p-3 fixed bottom-4 right-4">
       
