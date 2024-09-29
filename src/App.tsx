@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./components/Header";
 import Presentation from "./components/Presentation";
 import AboutMe from "./components/AboutMe";
 import Technologies from "./components/Technologies";

@@ -11,7 +11,7 @@ function useIsVisible(): [boolean, React.RefObject<HTMLDivElement>]{
         setIsVisible(entry.isIntersecting);
       },
       {
-        threshold: 0.2, 
+        threshold: 0.5, 
       }
     );
 
