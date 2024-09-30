@@ -33,7 +33,7 @@ function Contact() {
           className="absolute z-10 left-0 top-[-50%]"
         />
       </div>
-      <div className="flex flex-col md:justify-center md:flex-row   z-20">
+      <div className="flex flex-col md:justify-center md:flex-row z-50">
         <img src="/a.gif" alt="" className="z-20" />
 
         <div className="flex flex-col self-center z-20">

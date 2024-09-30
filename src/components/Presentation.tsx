@@ -32,21 +32,46 @@ function Presentation() {
 <img src="/cloud2.webp" alt="" width={600} className="absolute z-10 right-0 top-0" />
 <img src="/cloud1.webp" alt="" width={600} className="absolute z-10 left-0 top-0" />
 
-{/* <div className="relative ml-10 top-[150px] md:top-0">
-   
-<img src="/Querubin1.webp" alt="" width={120} height={120} className="z-30 absolute Querubin1-1 w-[100px] md:w-[120px]" />
-<img src="/Querubin1-2.webp" alt="" width={120} height={120} className="z-20 absolute Querubin1 w-[100px] md:w-[120px]" />
-
+<div className="relative ml-10 top-[150px] md:top-0">
+  <img 
+    src="/Querubin1.webp" 
+    alt="" 
+    width={120} 
+    height={120} 
+    className="z-30 absolute Querubin1-1 w-[100px] md:w-[120px] lazyload" 
+  />
+  <img 
+    src="/Querubin1-2.webp" 
+    alt="" 
+    width={120} 
+    height={120} 
+    className="z-20 absolute Querubin1 w-[100px] md:w-[120px] lazyload" 
+  />
 </div>
 
-
 <div className="relative flex justify-end mr-10 top-[150px] md:top-0">
-   
-<img src="/Querubin2.webp" alt="" width={150} height={150} className="z-30 absolute Querubin1-1 w-[120px] md:w-[150px]" />
-<img src="/Querubin2-1.webp" alt="" width={150} height={150} className="z-20 absolute  w-[120px] md:w-[150px]" />
-<img src="/Querubin2-2.webp" alt="" width={150} height={150} className="z-20 absolute Querubin1 w-[120px] md:w-[150px]" />
-
-</div> */}
+  <img 
+    src="/Querubin2.webp" 
+    alt="" 
+    width={150} 
+    height={150} 
+    className="z-30 absolute Querubin1-1 w-[120px] md:w-[150px] lazyload" 
+  />
+  <img 
+    src="/Querubin2-1.webp" 
+    alt="" 
+    width={150} 
+    height={150} 
+    className="z-20 absolute w-[120px] md:w-[150px] lazyload" 
+  />
+  <img 
+    src="/Querubin2-2.webp" 
+    alt="" 
+    width={150} 
+    height={150} 
+    className="z-20 absolute Querubin1 w-[120px] md:w-[150px] lazyload" 
+  />
+</div>
 
 </section>
 
