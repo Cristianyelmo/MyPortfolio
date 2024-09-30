@@ -1,19 +1,19 @@
 import { useEffect } from "react";
-import useIsVisible from '../hooks/useIsVisible';
+import useVisibilityTracker from '../hooks/useIsVisible';
 import { MainHook } from "../Context/MainContext";
 function AboutMe() {
-  const [isVisible, elementRef] = useIsVisible();
+  const {visibility, elementRefs} = useVisibilityTracker();;
   const {setTextchibi} = MainHook()
   useEffect(() => {
-    if (isVisible) {
+    if (visibility.sobreMi) {
       console.log("El componente Contacto está visible en pantalla sobre mi");
       
       setTextchibi('esta parte habla sobre mi,aunque tengo conocimiento de fullstack muchos dicen que tengo mucho mas de frontend que de backend')
     }
-  }, [isVisible]);
+  }, [visibility.sobreMi]);
 
   return (
-    <div   ref={elementRef} className=" h-screen ">
+    <div   ref={elementRefs.sobreMi} id="sobreMi" className=" h-screen ">
 
 
 <h1 className="text-white glow-text text-center text-4xl">Sobre mi</h1>

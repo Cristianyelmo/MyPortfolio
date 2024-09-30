@@ -1,21 +1,21 @@
 import { useEffect } from "react";
-import useIsVisible from "../hooks/useIsVisible";
+import useVisibilityTracker from '../hooks/useIsVisible';
 import { MainHook } from "../Context/MainContext";
 
 function Contact() {
-  const [isVisible, elementRef] = useIsVisible();
+  const {visibility, elementRefs} = useVisibilityTracker();;
   const { setTextchibi } = MainHook();
   useEffect(() => {
-    if (isVisible) {
+    if (visibility.contacto) {
       console.log("El componente Contacto está visible en pantalla");
       setTextchibi(
         "este es mi redes de contacto donde puedas ver mi perfiles y darme trabajo a jajaj"
       );
     }
-  }, [isVisible]);
+  }, [visibility.contacto]);
 
   return (
-    <div ref={elementRef} className=" mt-20 h-screen content-center">
+    <div ref={elementRefs.contacto} id="contacto" className=" mt-20 h-screen content-center">
       <h1 className="text-white glow-text text-center text-4xl">Contacto</h1>
 
       <div className="relative md:top-[-30%] z-10">

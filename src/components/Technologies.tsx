@@ -1,21 +1,21 @@
 import { MainHook } from "../Context/MainContext";
 import { useEffect } from "react";
-import useIsVisible from '../hooks/useIsVisible';
+import useVisibilityTracker from '../hooks/useIsVisible';
 
 
 function Technologies() {
 
 const {Technologies,setTextchibi} = MainHook()
-const [isVisible, elementRef] = useIsVisible();
+const {visibility, elementRefs} = useVisibilityTracker();;
 
 useEffect(() => {
-  if (isVisible) {
+  if (visibility.tecnologias) {
     console.log("El componente Contacto está visible en pantalla");
     setTextchibi('aca esta las tecnologias que conozco,quisiera en un futuro aprender mas sobre JAVA y sobre la Programacion orientadas a objetos porque javascript es Programacion funcional para tener otra panorama')
   }
-}, [isVisible]);
+}, [visibility.tecnologias]);
   return (
-    <div ref={elementRef} className="">
+    <div ref={elementRefs.tecnologias} id="tecnologias" className="">
   
 
 <h1 className="text-white glow-text text-center text-4xl">Tecnologias</h1>

@@ -1,33 +1,59 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 
-function useIsVisible(): [boolean, React.RefObject<HTMLDivElement>]{
-  const [isVisible, setIsVisible] = useState(false);
+function useVisibilityTracker() {
+  const [visibility, setVisibility] = useState({
+    presentacion: false,
+    sobreMi: false,
+    proyectos: false,
+    tecnologias: false,
+    contacto: false,
+  });
+
+  const elementRefs = {
+    presentacion: useRef(null),
+    sobreMi: useRef(null),
+    proyectos: useRef(null),
+    tecnologias: useRef(null),
+    contacto: useRef(null),
+  };
   
-  const elementRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        console.log(entry)
-        setIsVisible(entry.isIntersecting);
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+        
+          if (entry.isIntersecting) {
+            setVisibility((prev) => ({ ...prev, [id]: true }));
+           
+          } else {
+            setVisibility((prev) => ({ ...prev, [id]: false }));
+          }
+        });
       },
-      {
-        threshold: 0.5, 
-      }
+      { threshold: 0.5 }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
+
+
+
+  
+    Object.values(elementRefs).forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
+      Object.values(elementRefs).forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
     };
   }, []);
 
-  return [isVisible, elementRef];
-};
- 
+  return { visibility, elementRefs };
+}
 
-export default useIsVisible;
+export default useVisibilityTracker;
