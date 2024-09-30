@@ -15,7 +15,7 @@ function Contact() {
   }, [isVisible]);
 
   return (
-    <div ref={elementRef} className=" mt-20 h-screen w-full content-center">
+    <div ref={elementRef} className=" mt-20 h-screen content-center">
       <h1 className="text-white glow-text text-center text-4xl">Contacto</h1>
 
       <div className="relative md:top-[-30%] z-10">

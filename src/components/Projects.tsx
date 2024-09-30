@@ -21,7 +21,7 @@ const href = valueProject && valueProject.Link;
 
 const isGrid = valueProject?.tecnologias.length && valueProject?.tecnologias.length > 7;
   return (
-    <div ref={elementRef} className=" mt-20 md:h-screen w-full relative">
+    <div ref={elementRef} className="md:h-screen ">
  
 { openModal && <div className="fixed inset-0 flex flex-col space-y-4 items-center justify-center bg-black bg-opacity-70 z-50">
  <div className="flex justify-end">

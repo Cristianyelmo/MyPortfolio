@@ -12,7 +12,7 @@ function AboutMe() {
   }, [isVisible]);
 
   return (
-    <div   ref={elementRef} className=" h-screen relative">
+    <div   ref={elementRef} className=" h-screen ">
 
 
 <h1 className="text-white glow-text text-center text-4xl">Sobre mi</h1>

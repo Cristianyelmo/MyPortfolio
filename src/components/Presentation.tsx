@@ -16,7 +16,7 @@ function Presentation() {
 
 
   return (
-    <div ref={elementRef}  className="h-screen ">
+    <div ref={elementRef}  className="h-screen">
   
 
 <section className="text-white glow-text mt-20 text-xl relative ">
