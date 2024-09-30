@@ -37,6 +37,7 @@ function Presentation() {
     src="/Querubin1.webp" 
     alt="" 
     width={120} 
+    loading="lazy" 
     height={120} 
     className="z-30 absolute Querubin1-1 w-[100px] md:w-[120px] lazyload" 
   />
@@ -44,6 +45,7 @@ function Presentation() {
     src="/Querubin1-2.webp" 
     alt="" 
     width={120} 
+    loading="lazy" 
     height={120} 
     className="z-20 absolute Querubin1 w-[100px] md:w-[120px] lazyload" 
   />
@@ -53,12 +55,14 @@ function Presentation() {
   <img 
     src="/Querubin2.webp" 
     alt="" 
+    loading="lazy" 
     width={150} 
     height={150} 
     className="z-30 absolute Querubin1-1 w-[120px] md:w-[150px] lazyload" 
   />
   <img 
     src="/Querubin2-1.webp" 
+    loading="lazy" 
     alt="" 
     width={150} 
     height={150} 
@@ -67,6 +71,7 @@ function Presentation() {
   <img 
     src="/Querubin2-2.webp" 
     alt="" 
+    loading="lazy" 
     width={150} 
     height={150} 
     className="z-20 absolute Querubin1 w-[120px] md:w-[150px] lazyload" 
