@@ -22,7 +22,7 @@ function AboutMe() {
 
 <div className="relative flex justify-center items-center">
  <img src="/marco.webp" alt="" width={453} height={600}  className="absolute z-30 w-[453px] " /> 
-<img src="/rap4.webp" alt="" width={253} height={600}  className="absolute z-20 w-[300px] " />
+<img src="/ssaaas.webp" alt="" width={253} height={600}  className="absolute z-20 w-[300px] " />
 <img src="/marco1.webp" alt="" width={453} height={600} className=" z-10 w-[453px] "/>
 </div> 
 

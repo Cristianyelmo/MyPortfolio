@@ -56,7 +56,7 @@ function App() {
       
       )}
 
-<button className="bg-black text-white p-1"
+<button className="bg-black/90 text-white p-1"
        
        onClick={() => Playbutton()}
      >

@@ -34,7 +34,7 @@ function Contact() {
         />
       </div>
       <div className="flex flex-col md:justify-center md:flex-row z-50">
-        <img src="/a.gif" alt="" className="z-20" />
+        <img src="/Tv3.gif" alt="" className="z-20" />
 
         <div className="flex flex-col self-center z-20">
           <a
