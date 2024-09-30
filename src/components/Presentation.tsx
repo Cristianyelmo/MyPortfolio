@@ -16,10 +16,10 @@ function Presentation() {
 
 
   return (
-    <div ref={elementRef}  className="h-screen">
+    <div ref={elementRef}  className="h-screen pt-10">
   
 
-<section className="text-white glow-text mt-20 text-xl relative ">
+<section className="text-white glow-text text-xl relative ">
     <div className="z-20 text-center flex flex-col items-center relative">
 <h2 className="text-sm md:text-base z-20">Hola soy cristian amarilla y soy</h2>
 <h1 className="md:text-7xl mt-7 text-3xl z-20">Desarrollador</h1>
