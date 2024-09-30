@@ -46,8 +46,8 @@ export default function Modelsx() {
             const mixer = new THREE.AnimationMixer(model);
            
              const action = mixer.clipAction(gltf.animations[clipname]);
-              action.play(); 
-          
+             /*  action.play();  */
+              action.reset().fadeIn(0.5).play();
          
  
 
