@@ -39,7 +39,7 @@ function Presentation() {
     width={120} 
     loading="lazy" 
     height={120} 
-    className="z-30 absolute Querubin1-1 w-[100px] md:w-[120px] lazyload" 
+    className="z-30 absolute w-[100px] md:w-[120px] lazyload" 
   />
   <img 
     src="/Querubin1-2.webp" 
@@ -47,7 +47,7 @@ function Presentation() {
     width={120} 
     loading="lazy" 
     height={120} 
-    className="z-20 absolute Querubin1 w-[100px] md:w-[120px] lazyload" 
+    className="z-20 absolute  w-[100px] md:w-[120px] lazyload" 
   />
 </div>
 
@@ -58,7 +58,7 @@ function Presentation() {
     loading="lazy" 
     width={150} 
     height={150} 
-    className="z-30 absolute Querubin1-1 w-[120px] md:w-[150px] lazyload" 
+    className="z-30 absolute w-[120px] md:w-[150px] lazyload" 
   />
   <img 
     src="/Querubin2-1.webp" 
@@ -74,7 +74,7 @@ function Presentation() {
     loading="lazy" 
     width={150} 
     height={150} 
-    className="z-20 absolute Querubin1 w-[120px] md:w-[150px] lazyload" 
+    className="z-20 absolute  w-[120px] md:w-[150px] lazyload" 
   />
 </div>
 
