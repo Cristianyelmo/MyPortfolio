@@ -136,13 +136,13 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
 
   const [openModal, setOpenModal] = useState<boolean>(false);
 
-  const [textChibi, setTextchibi] = useState<string>("Hola como estannnnn");
+  const [textChibi, setTextchibi] = useState<string>("hola como estan mi nombre es mono,y voy a mostrarte cada detalle de mi portfolio");
 
   const [clipname, setClipname] = useState(6);
 
   const [playText, setPlayText] = useState(false);
 
-  console.log(playText);
+ 
   const [isVisible, setIsVisible] = useState(false);
   const Playbutton = () => {
     setPlayText((prevState) => !prevState);

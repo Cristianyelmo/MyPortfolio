@@ -9,8 +9,10 @@ function Presentation() {
   const {setTextchibi} = MainHook()
   useEffect(() => {
     if (isVisible) {
-      console.log("El componente Contacto está visible en pantalla");
+      console.log("El componente Contacto está visible en pantalla presentacion");
+    
       setTextchibi('hola como estan mi nombre es mono,y voy a mostrarte cada detalle de mi portfolio')
+   
     }
   }, [isVisible]);
 

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef,useCallback } from "react";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import * as THREE from "three";
 import { MainHook } from "../Context/MainContext";
@@ -82,20 +82,16 @@ export default function Modelsx() {
   }, [clipname]);
 
 
-
+  const timeoutDelay = (textChibi.length * 50) + 1500;
   
-  useEffect((
-    
-      
-  )=>{
-    let lengthText = textChibi.length
-    let timeoutId:any;
-    if(playText){
-      timeoutId= setTimeout(() => {
+  useEffect(()=>{
+    if (!playText) return;
+   
+      const timeoutId= setTimeout(() => {
        
         setClipname(6)
-      }, (lengthText * 50) + 1500);
-      } 
+      },timeoutDelay);
+      
 
 
 
@@ -103,27 +99,24 @@ export default function Modelsx() {
         clearTimeout(timeoutId);
       };
 
-  },[playText])
+  },[playText,timeoutDelay])
 
 
 
+  const toggleVisibility = useCallback(() => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
 
-
+    if (window.scrollY === 0) {
+      setClipname(6);
+    }
+  }, [setIsVisible, setClipname]);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) { 
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-
-
-      if (window.scrollY === 0) {
-        setClipname(6)
-      }
-    };
-
+   
     window.addEventListener('scroll', toggleVisibility);
 
    

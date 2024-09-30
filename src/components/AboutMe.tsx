@@ -6,7 +6,8 @@ function AboutMe() {
   const {setTextchibi} = MainHook()
   useEffect(() => {
     if (isVisible) {
-      console.log("El componente Contacto está visible en pantalla");
+      console.log("El componente Contacto está visible en pantalla sobre mi");
+      
       setTextchibi('esta parte habla sobre mi,aunque tengo conocimiento de fullstack muchos dicen que tengo mucho mas de frontend que de backend')
     }
   }, [isVisible]);
