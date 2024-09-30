@@ -16,10 +16,10 @@ function Presentation() {
 
 
   return (
-    <div ref={elementRef}  className="h-screen pt-10 content-center">
+    <div ref={elementRef}  className="h-screen pt-10  flex justify-center items-center">
   
 
-<section className="text-white glow-text text-xl ">
+<section className="text-white glow-text text-xl">
   <div className='flex justify-center'>
 
  
