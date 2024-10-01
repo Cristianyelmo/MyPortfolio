@@ -40,7 +40,7 @@ const widthResponsive = window.innerWidth
        
             <div className="flex flex-col items-center">
                 <div className="relative">
-{/*             <img src="/marco1-2.webp" alt="" width={900} height={900} className="z-20  absolute"/> */}
+            <img src="/marco1-2.webp" alt="" width={900} height={900} className="z-20  absolute"/>
             <img src={`/${item.marco}.webp`} alt="" width={900} height={900} className="z-10"/>
             </div>
            <img src={`/${item.name}.webp`} alt="" width={item.size} height={item.size}/>
