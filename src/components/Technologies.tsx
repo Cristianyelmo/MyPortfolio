@@ -11,7 +11,7 @@ const {visibility, elementRefs} = useVisibilityTracker();;
 useEffect(() => {
   if (visibility.tecnologias) {
     console.log("El componente Contacto está visible en pantalla");
-    setTextchibi('aca esta las tecnologias que conozco,quisiera en un futuro aprender mas sobre JAVA y sobre la Programacion orientadas a objetos porque javascript es Programacion funcional para tener otra panorama')
+    setTextchibi('Las tecnologias')
   }
 }, [visibility.tecnologias]);
   return (

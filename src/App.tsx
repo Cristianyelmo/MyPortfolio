@@ -79,7 +79,7 @@ document.body.style.backgroundSize = "auto";
    
 
    {isVisible && (
-     <button className="p-4 bg-black/50 rounded-full"
+     <button className="p-4 bg-black/50  glow-effect rounded-full"
        onClick={scrollToTop}
       
      >
@@ -88,7 +88,7 @@ document.body.style.backgroundSize = "auto";
    
    )}
 
-<button className="bg-black/90 text-white p-1"
+<button className="bg-black/90 text-white p-1  glow-effect"
     
     onClick={() => Playbutton()}
   >
@@ -100,7 +100,7 @@ document.body.style.backgroundSize = "auto";
 
 
      {playText && (
-  <div className="breakP z-50 bg-black/70 text-white max-w-[900px] min-h-[100px] p-4 fixed bottom-4 md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center">
+  <div className="breakP z-50 bg-black/70 glow-effect text-white max-w-[900px] min-h-[100px] p-4 fixed bottom-4 md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center">
     <Typewriter text={textChibi} speed={50} />
   </div>
 )}

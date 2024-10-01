@@ -8,12 +8,12 @@ function AboutMe() {
     if (visibility.sobreMi) {
       console.log("El componente Contacto está visible en pantalla sobre mi");
       
-      setTextchibi('esta parte habla sobre mi,aunque tengo conocimiento de fullstack muchos dicen que tengo mucho mas de frontend que de backend')
+      setTextchibi('esta parte habla sobre mi,aunque siempre busco aprender de manera FullStack,cuando busque trabajo siempre sentia que mi fuerte era en Front-End')
     }
   }, [visibility.sobreMi]);
 
   return (
-    <div   ref={elementRefs.sobreMi} id="sobreMi" className=" h-screen ">
+    <div   ref={elementRefs.sobreMi} id="sobreMi" className="">
 
 
 <h1 className="text-white glow-text text-center text-4xl">Sobre mi</h1>
@@ -29,8 +29,17 @@ function AboutMe() {
 
 
 
-<div className="bg-black/40 glow-effect max-w-[600px]   z-20 h-full  p-3 m-3">
-<p className="text-white glow-text">Hola me llamo cristian y soy desarrollador full stack cuando tenia 8 años me culiee un perro en la calle</p>
+<div className="bg-black/40 glow-effect max-w-[500px] min-h-[500px]  z-20 h-full text-center flex justify-center items-center p-3 m-3">
+<p className="text-white glow-text">Hace más de 
+  un año que estoy en este camino de la programación, 
+  estudie en Digital House gracias a la beca de Formar
+   y desde ahí seguí mi camino autodidacta haciendo proyectos propios,
+    en marzo pude conseguir mi primer trabajo como programador Front-End 
+    aunque duro solo 2 meses, tuve una experiencia buena y sigo manteniendo
+     contacto haciendo trabajos pero freelance mientras 
+     iba creando mi nuevo Portafolio.
+      Además de eso, tengo conocimiento en programas de Edición y 3D y
+       en Diseño UX/UI.</p>
 </div>
 </section>
 

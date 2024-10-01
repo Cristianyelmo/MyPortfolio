@@ -40,7 +40,7 @@ function Contact() {
           <a
             target="__blank"
             href="/Amarilla-Cristian-CV-Desarrollo-web full-stack (2).pdf"
-            className="bg-black/50 p-4 text-white text-center glow-text mb-10"
+            className="bg-black/50 p-4  glow-effect text-white text-center glow-text mb-10"
           >
             Descargar CV
           </a>

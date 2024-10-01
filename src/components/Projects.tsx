@@ -24,7 +24,7 @@ const href = valueProject && valueProject.Link;
   return (
     <div ref={elementRefs.proyectos} id="proyectos" className="h-screen ">
  
-{ openModal && <div className="fixed inset-0 flex flex-col space-y-4 items-center justify-center bg-black bg-opacity-70 z-50">
+{ openModal && <div className="fixed inset-0 flex flex-col space-y-4 items-center justify-center bg-black bg-opacity-70 index-button">
  <div className="flex justify-end">
       <button
         onClick={() =>closeProjectModal()} 
