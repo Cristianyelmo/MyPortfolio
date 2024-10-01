@@ -48,7 +48,7 @@ const [classname,setClassname]=useState('')
     timeoutId = setTimeout(() => {
       
       setClassname('test')
-      document.body.style.backgroundImage = "url('/public/Motivo.webp')";
+      document.body.style.backgroundImage = "url('/Motivo.webp')";
 document.body.style.backgroundRepeat = "repeat";
 document.body.style.backgroundSize = "auto";
     }, 1000);
