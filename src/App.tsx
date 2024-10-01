@@ -100,7 +100,7 @@ document.body.style.backgroundSize = "auto";
 
 
      {playText && (
-  <div className="breakP z-50 bg-black/80 text-white max-w-[900px] min-h-[100px] p-4 fixed bottom-4 md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center">
+  <div className="breakP z-50 bg-black/70 text-white max-w-[900px] min-h-[100px] p-4 fixed bottom-4 md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center">
     <Typewriter text={textChibi} speed={50} />
   </div>
 )}
