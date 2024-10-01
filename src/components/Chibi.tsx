@@ -30,7 +30,7 @@ export default function Modelsx() {
       renderer.setSize(width, height);
       container && container.appendChild(renderer.domElement);
       if (window.innerWidth < 600) {
-        renderer.setPixelRatio(window.devicePixelRatio * 0.7);
+        renderer.setPixelRatio(window.devicePixelRatio * 0.5);
       }
       camera.position.set(2, 2, 68);
 
