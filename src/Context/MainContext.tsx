@@ -146,14 +146,21 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
 
  
   const [isVisible, setIsVisible] = useState(false);
+  
+
+ 
   const Playbutton = () => {
     setPlayText((prevState) => !prevState);
-
+   
     if (!playText) {
+      
+    
       setClipname(10);
       setIsVisible(false);
     } else {
       setClipname(6);
+      
+   
     }
 
     
@@ -205,7 +212,8 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
         setIsVisible,
         scrollToTop,
         videoRef,
-        closeProjectModal
+        closeProjectModal,
+       
       }}
     >
       {children}

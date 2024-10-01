@@ -9,7 +9,7 @@ export default function Modelsx() {
   const glbRef = useRef(null);
   const clock = useRef(new THREE.Clock());
 
-  const { clipname, setClipname, playText, textChibi, setIsVisible } =
+  const { clipname, setClipname, playText, textChibi, setIsVisible} =
     MainHook();
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -84,6 +84,7 @@ export default function Modelsx() {
 
     const timeoutId = setTimeout(() => {
       setClipname(6);
+     
     }, timeoutDelay);
 
     return () => {
