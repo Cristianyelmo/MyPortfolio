@@ -20,11 +20,11 @@ function AboutMe() {
 <section className="flex md:justify-center flex-col md:flex-row items-center relative">
 <img src="/cloud2.webp" width={700} alt="" className="absolute z-10 right-0 md:top-0" />
 
- {/* <div className="relative flex justify-center items-center">
+ <div className="relative flex justify-center items-center">
  <img src="/marco.webp" alt="" width={453} height={600}  className="absolute z-30 w-[453px] " /> 
 <img src="/ssaaas.webp" alt="" width={253} height={600}  className="absolute z-20 w-[300px] " />
 <img src="/marco1.webp" alt="" width={453} height={600} className=" z-10 w-[453px] "/>
-</div> */}  
+</div>  
 
 
 
