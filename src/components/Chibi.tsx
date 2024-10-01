@@ -23,7 +23,7 @@ export default function Modelsx() {
 
       renderer.setSize(width, height);
       container && container.appendChild(renderer.domElement);
-      renderer.setPixelRatio(window.devicePixelRatio * 0.80); 
+      renderer.setPixelRatio(  window.devicePixelRatio *  window.innerWidth > 600 ? 1 : 0.80); 
       camera.position.set(2, 2, 68);
 
       const loader = new GLTFLoader();
