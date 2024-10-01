@@ -64,3 +64,21 @@ body {
 .black-background {
   z-index: 100;
 }
+
+
+
+
+
+@keyframes inicio {
+  0% {
+    opacity: 1;
+  }
+  100% {
+ opacity: 0;
+  }
+
+}
+
+.test {
+animation:inicio 1s forwards;
+}

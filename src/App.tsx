@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Modelsx from "./components/Chibi";
 import { MainHook } from "./Context/MainContext";
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 import Typewriter from "./components/Typewriter";
 
 function App() {
@@ -21,13 +21,16 @@ function App() {
       setPlayText(true);
       setClipname(10);
       setIsVisible(false)
-     
-    }, 500);
+      setClassname('hidden')
+    }, 1800);
 
     return () => {
       clearTimeout(timeoutId);
     };
   }, []); 
+
+
+
   useEffect(() => {
     if (playText) {
       body.classList.add("overflow-y-hidden");
@@ -37,9 +40,26 @@ function App() {
   }, [playText]);
 
 
+const [classname,setClassname]=useState('')
+  
+  useEffect(()=>{
+    let timeoutId;
+
+    timeoutId = setTimeout(() => {
+      
+      setClassname('test')
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  },[])
+
   return (
     <div className={``}>
-   <div className="fixed inset-0 bg-black black-background"></div>
+   <div className={`fixed ${classname} z-50 black-background inset-0 bg-black flex justify-center items-center text-white text-center`}>
+    cargando...
+</div>
    <Modelsx />
       
       <div  className="flex index-button flex-col space-y-4 text-white p-3 fixed bottom-4 right-4">
