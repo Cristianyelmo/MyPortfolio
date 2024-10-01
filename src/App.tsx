@@ -14,7 +14,7 @@ function App() {
 
   const body = document.body;
 
-  /* useEffect(() => {
+  useEffect(() => {
     let timeoutId;
 
     timeoutId = setTimeout(() => {
@@ -27,7 +27,7 @@ function App() {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, []); */
+  }, []); 
   useEffect(() => {
     if (playText) {
       body.classList.add("overflow-y-hidden");
