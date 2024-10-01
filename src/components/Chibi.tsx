@@ -23,7 +23,7 @@ export default function Modelsx() {
 
       renderer.setSize(width, height);
       container && container.appendChild(renderer.domElement);
-
+      renderer.setPixelRatio(window.devicePixelRatio * 0.75);
       camera.position.set(2, 2, 68);
 
       const loader = new GLTFLoader();
@@ -59,7 +59,7 @@ export default function Modelsx() {
         
         
       );
-
+     
       
       function animate() {
         const delta = clock.current.getDelta();
@@ -67,6 +67,7 @@ export default function Modelsx() {
         mixersRef.current.forEach((mixer) => mixer.update(delta)); 
 
         renderer.render(scene, camera);
+        
         renderer.setAnimationLoop(animate);
       }
 
