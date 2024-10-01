@@ -1,4 +1,4 @@
-import React, { createContext, useContext, ReactNode, useState } from "react";
+import React, { createContext, useContext, ReactNode, useState,useRef } from "react";
 
 interface MainContextType {
   Technologies: Array<{ name: string; image: string }>;
@@ -43,6 +43,8 @@ interface MainContextType {
   isVisible: boolean;
   setIsVisible: (open: boolean) => void;
   scrollToTop:() => void;
+  closeProjectModal:() => void;
+  videoRef: React.RefObject<HTMLVideoElement>;
 }
 export const MainContext = createContext<MainContextType | null>(null);
 export const MainHook = () => {
@@ -174,6 +176,15 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
     setClipname(5)
   };
 
+  
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const closeProjectModal =()=>{
+    setOpenModal(false);
+    if(videoRef.current){
+    videoRef.current.pause(); 
+      videoRef.current.currentTime = 0; 
+    }
+  }
   return (
     <MainContext.Provider
       value={{
@@ -192,7 +203,9 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
         Playbutton,
         isVisible,
         setIsVisible,
-        scrollToTop 
+        scrollToTop,
+        videoRef,
+        closeProjectModal
       }}
     >
       {children}

@@ -4,7 +4,8 @@ import useVisibilityTracker from '../hooks/useIsVisible';
 import { useEffect } from "react";
 function Projects() {
   const {visibility, elementRefs} = useVisibilityTracker();;
-const {valueProject,openModal,setOpenModal} = MainHook()
+const {valueProject,openModal,setOpenModal, videoRef,
+  closeProjectModal} = MainHook()
  const {setTextchibi} = MainHook()
 useEffect(() => {
   if (visibility.proyectos) {
@@ -26,14 +27,14 @@ const href = valueProject && valueProject.Link;
 { openModal && <div className="fixed inset-0 flex flex-col space-y-4 items-center justify-center bg-black bg-opacity-70 z-50">
  <div className="flex justify-end">
       <button
-        onClick={() => setOpenModal(false)} 
+        onClick={() =>closeProjectModal()} 
         className="px-4 py-2 bg-black/50 text-white rounded-lg"
       >
         X
       </button>
     </div>
   <div className="relative  glow-effect p-2">
-    <video width="640" height="640" controls autoPlay className="relative z-10">
+    <video ref={videoRef} width="640" height="640" controls autoPlay className="relative z-10">
       <source src={`/${valueProject && valueProject.name}.mp4`} type="video/mp4" />
       Tu navegador no soporta la etiqueta de video.
     </video>
