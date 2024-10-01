@@ -61,3 +61,6 @@ body {
 }
 
 
+.black-background {
+  z-index: 100;
+}

@@ -14,7 +14,7 @@ function App() {
 
   const body = document.body;
 
-  useEffect(() => {
+  /* useEffect(() => {
     let timeoutId;
 
     timeoutId = setTimeout(() => {
@@ -27,7 +27,7 @@ function App() {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, []);
+  }, []); */
   useEffect(() => {
     if (playText) {
       body.classList.add("overflow-y-hidden");
@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className={``}>
-   
+   <div className="fixed inset-0 bg-black black-background"></div>
    <Modelsx />
       
       <div  className="flex index-button flex-col space-y-4 text-white p-3 fixed bottom-4 right-4">
