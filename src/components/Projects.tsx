@@ -4,7 +4,7 @@ import useVisibilityTracker from '../hooks/useIsVisible';
 import { useEffect } from "react";
 function Projects() {
   const {visibility, elementRefs} = useVisibilityTracker();;
-const {valueProject,openModal,setOpenModal, videoRef,
+const {valueProject,openModal, videoRef,
   closeProjectModal} = MainHook()
  const {setTextchibi} = MainHook()
 useEffect(() => {
