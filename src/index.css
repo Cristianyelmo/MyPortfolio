@@ -15,9 +15,9 @@
 
 
 body {
-  background-image: url("/Motivo.webp"); 
+ background-image: url("/Motivo.webp"); 
   background-repeat: repeat;
-  background-color: black;
+  background-size: auto;   
 
 
   font-family: 'Aexir', sans-serif;
