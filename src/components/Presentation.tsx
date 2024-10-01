@@ -18,7 +18,7 @@ function Presentation() {
 
 
   return (
-    <div ref={elementRefs.presentacion} id="presentacion"  className="h-screen pt-10  flex justify-center items-center">
+    <div ref={elementRefs.presentacion} id="presentacion"  className="min-h-screen pt-10  flex justify-center items-center">
   
 
 <section className="text-white glow-text text-xl">
