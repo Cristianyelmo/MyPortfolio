@@ -11,7 +11,7 @@ function Presentation() {
     if (visibility.presentacion) {
       console.log("El componente Contacto está visible en pantalla presentacion");
     
-      setTextchibi('hola como estan mi nombre es mono,y voy a mostrarte cada detalle de mi portfolio')
+      setTextchibi('hola como estan mi nombre es mono,y voy a mostrarte cada detalle de mi portfolio.En cada seccion puedes pulsar PLAY para que te cuente mas detalles y STOP para parar y seguir scrolleando.Pulsa STOP para parar el dialogo y seguir scrolleando :)')
    
     }
   }, [visibility.presentacion]);
