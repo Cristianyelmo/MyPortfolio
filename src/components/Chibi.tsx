@@ -91,7 +91,7 @@ export default function Modelsx() {
     if (glbRef.current && mixersRef.current) {
       console.log('hola');
   console.log(clipname)
-      const mixer = mixersRef.current[1];
+      const mixer = mixersRef.current[0];
   
       // Use the proper type assertion for animations
       const animations = glbRef.current.animations;
