@@ -15,7 +15,7 @@ useEffect(() => {
   }
 }, [visibility.tecnologias]); 
   return (
-    <div ref={elementRefs.tecnologias}  id="tecnologias" className="min-h-screen">
+    <div ref={elementRefs.tecnologias}  id="tecnologias" className="min-h-screen xd">
   
 
 <h1 className="text-white glow-text text-center text-4xl">Tecnologias</h1>

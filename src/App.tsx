@@ -117,21 +117,18 @@ Playbutton,
           <Typewriter text={textChibi} speed={50} />
         </div>
       )} 
-<div className="relative z-10">
+
        <Presentation /> 
-       </div>
-       <div className="relative z-10">
+       
      <AboutMe />  
-     </div>
-     <div className="relative z-10">
+     
        <Technologies />  
-       </div>
-       <div className="relative z-10">
+       
       <Projects />
-      </div>
-      <div className="relative z-10">
+  
+   
       <Contact /> 
-      </div>
+     
     </>
   );
 }
