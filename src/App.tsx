@@ -43,7 +43,7 @@ function App() {
       body.classList.add("overflow-y-hidden");
     } else {
       body.classList.remove("overflow-y-hidden");
-    } 
+    }
   }, [playText]);
 
   const [classname, setClassname] = useState("");
@@ -99,19 +99,14 @@ function App() {
       )}
 
       <Presentation />
-    
-    
+
       <AboutMe />
-     
-      
+
       <Technologies />
-    
-     
+
       <Projects />
-     
-    
+
       <Contact />
-     
     </>
   );
 }
