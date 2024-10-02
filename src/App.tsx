@@ -81,7 +81,7 @@ Playbutton,
 
 
   return (
-    <div className="min-h-screen">
+    <>
        {classname !== "hidden" && (
         <div
           className={`fixed ${classname} z-50 black-background inset-0 bg-black flex justify-center items-center text-white text-center`}
@@ -123,7 +123,7 @@ Playbutton,
      {/*  <Technologies />
       <Projects />
       <Contact /> */}
-    </div>
+    </>
   );
 }
 
