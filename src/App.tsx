@@ -14,7 +14,7 @@ function App() {
   /*   textChibi, */
     playText,
 /*     Playbutton, */
-    setPlayText,
+  /*   setPlayText, */
     setClipname,
 /*     isVisible, */
     setIsVisible,
