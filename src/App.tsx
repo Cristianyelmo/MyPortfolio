@@ -4,21 +4,21 @@ import AboutMe from "./components/AboutMe";
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Modelsx from "./components/Chibi";
+/* import Modelsx from "./components/Chibi"; */
 import { MainHook } from "./Context/MainContext";
-import { useEffect, useState } from "react";
-import Typewriter from "./components/Typewriter";
+import { useEffect, /* useState */ } from "react";
+/* import Typewriter from "./components/Typewriter"; */
 
 function App() {
   const {
-    textChibi,
+  /*   textChibi, */
     playText,
-    Playbutton,
+/*     Playbutton, */
     setPlayText,
     setClipname,
-    isVisible,
+/*     isVisible, */
     setIsVisible,
-    scrollToTop,
+  /*   scrollToTop, */
   } = MainHook();
 
   const body = document.body;
@@ -30,7 +30,7 @@ function App() {
       setPlayText(true);
       setClipname(10);
       setIsVisible(false);
-      setClassname("hidden");
+     /*  setClassname("hidden"); */
     }, 1800);
 
     return () => {
@@ -46,13 +46,13 @@ function App() {
     }
   }, [playText]);
 
-  const [classname, setClassname] = useState("");
+/*   const [classname, setClassname] = useState(""); */
 
   useEffect(() => {
     let timeoutId;
 
     timeoutId = setTimeout(() => {
-      setClassname("test");
+    /*   setClassname("test"); */
       document.body.style.backgroundImage = "url('/Motivo.webp')";
       document.body.style.backgroundRepeat = "repeat";
       document.body.style.backgroundSize = "auto"; 
