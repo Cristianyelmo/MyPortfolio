@@ -177,7 +177,7 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', 
+     /*  behavior: 'smooth',  */
     });
   
     setClipname(5)

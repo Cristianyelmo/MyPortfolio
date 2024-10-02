@@ -29,7 +29,7 @@ function AboutMe() {
 
 
 
-<div className="bg-black/40 glow-effect max-w-[500px]   z-20 h-full text-center flex justify-center items-center p-3 m-3">
+<div className="bg-black glow-effect max-w-[500px]   z-20 h-full text-center flex justify-center items-center p-3 m-3">
 <p className="text-white glow-text">Hace más de 
   un año que estoy en este camino de la programación, 
   estudie en Digital House gracias a la beca de Formar
