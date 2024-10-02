@@ -1,5 +1,5 @@
 import "./App.css";
-import Presentation from "./components/Presentation";
+/* import Presentation from "./components/Presentation"; */
 import AboutMe from "./components/AboutMe";
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
@@ -118,7 +118,7 @@ function App() {
         </div>
       )} */}
 
-      <Presentation />
+     {/*  <Presentation /> */}
       <AboutMe />
       <Technologies />
       <Projects />
