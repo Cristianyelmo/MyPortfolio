@@ -16,7 +16,7 @@ function AboutMe() {
   }, [visibility.sobreMi, setTextchibi]);
 
   return (
-    <div ref={elementRefs.sobreMi} id="sobreMi"  className="min-h-screen" >
+    <div ref={elementRefs.sobreMi} id="sobreMi"  className="md:min-h-screen" >
       <h1 className="text-white glow-text text-center text-4xl">Sobre mi</h1>
       <section className="flex md:justify-center flex-col md:flex-row items-center relative">
         <img src="/cloud2.webp" width={700} alt="decorative" className="absolute z-10 right-0 md:top-0" />
