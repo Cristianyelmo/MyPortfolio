@@ -55,7 +55,7 @@ export default function Modelsx() {
         if (gltf.animations && gltf.animations.length > 0) {
           const mixer = new THREE.AnimationMixer(model);
 
-          const action = mixer.clipAction(gltf.animations[clipname]);
+          const action = mixer.clipAction(gltf.animations[6]);
           /*  action.play();  */
           action.reset().fadeIn(0.5).play();
 
@@ -84,6 +84,7 @@ export default function Modelsx() {
   }, []);
 
   useEffect(() => {
+    console.log('holaaaa xd')
     if (glbRef.current && mixersRef.current.length > 1) {
       const mixer = mixersRef.current[1];
 
