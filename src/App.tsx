@@ -97,13 +97,14 @@ function App() {
           <Typewriter text={textChibi} speed={50} />
         </div>
       )}
-
+<div className="min-h-screen pt-10  flex justify-center items-center">
       <Presentation />
-
+      </div>
+      <div className="min-h-screen">
       <AboutMe />
-
+      </div>
       <Technologies />
-
+      
       <Projects />
 
       <Contact />
