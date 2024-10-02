@@ -1,9 +1,9 @@
 import "./App.css";
 import Presentation from "./components/Presentation"; 
-import AboutMe from "./components/AboutMe";  
-/* import Technologies from "./components/Technologies";
+/* import AboutMe from "./components/AboutMe";  
+ import Technologies from "./components/Technologies"; */
 import Projects from "./components/Projects";
-import Contact from "./components/Contact"; */
+import Contact from "./components/Contact"; 
 import Modelsx from "./components/Chibi"; 
 import { MainHook } from "./Context/MainContext";
 import { useEffect, useState } from "react";
@@ -119,10 +119,10 @@ Playbutton,
       )} 
 
        <Presentation /> 
-     <AboutMe />  
-     {/*  <Technologies />
+  {/*    <AboutMe />  
+       <Technologies /> */}
       <Projects />
-      <Contact /> */}
+      <Contact /> 
     </>
   );
 }
