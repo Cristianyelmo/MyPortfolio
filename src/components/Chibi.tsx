@@ -51,10 +51,10 @@ export default function Modelsx() {
         const ambientLight = new THREE.AmbientLight(0xffffff, 4); // Lower intensity
         scene.add(ambientLight);
 
-        if (gltf.animations && gltf.animations.length > 0) {
+        if (glbRef.current && glbRef.current.animations && glbRef.current.animations.length > 0) {
           const mixer = new THREE.AnimationMixer(model);
 
-          const action = mixer.clipAction(gltf.animations[clipname]);
+          const action = mixer.clipAction(glbRef.current.animations[clipname]);
           /*  action.play();  */
           action.reset().fadeIn(0.5).play();
 
@@ -82,17 +82,20 @@ export default function Modelsx() {
     }
   }, []);
 
+
+
   useEffect(() => {
-    console.log('holaaaa xd')
     if (glbRef.current && mixersRef.current.length > 1) {
+      console.log('hola');
+  console.log(clipname)
       const mixer = mixersRef.current[1];
-
-      if (
-        glbRef.current.animations &&
-        glbRef.current.animations.length > clipname
-      ) {
-        const action = mixer.clipAction(glbRef.current.animations[clipname]);
-
+  
+      // Use the proper type assertion for animations
+      const animations = glbRef.current.animations;
+      if (animations && animations.length > clipname) {
+        const action = mixer.clipAction(animations[clipname]);
+  
+        // Stop any currently playing animation
         mixer.stopAllAction();
         action.reset().fadeIn(0.5).play();
       } else {
