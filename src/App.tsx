@@ -1,6 +1,6 @@
 import "./App.css";
 import Presentation from "./components/Presentation"; 
-/* import AboutMe from "./components/AboutMe";   */
+import AboutMe from "./components/AboutMe";  
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -81,7 +81,7 @@ Playbutton,
 
 
   return (
-    <div className="">
+    <div className="min-h-screen">
        {classname !== "hidden" && (
         <div
           className={`fixed ${classname} z-50 black-background inset-0 bg-black flex justify-center items-center text-white text-center`}
@@ -119,7 +119,7 @@ Playbutton,
       )} 
 
        <Presentation /> 
-    {/*   <AboutMe />  */}
+     <AboutMe />  
       <Technologies />
       <Projects />
       <Contact />
