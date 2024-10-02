@@ -83,3 +83,9 @@ min-height: 100vh;
 .test {
 animation:inicio 1s forwards;
 }
+
+
+body, html {
+  will-change: scroll-position;
+  transform: translateZ(0); 
+}
