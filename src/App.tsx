@@ -21,7 +21,7 @@ function App() {
     scrollToTop,
   } = MainHook();
 
- /*  const body = document.body; */
+  const body = document.body;
 
   useEffect(() => {
     let timeoutId;
@@ -39,11 +39,11 @@ function App() {
   }, []);
 
   useEffect(() => {
-  /*   if (playText) {
+    if (playText) {
       body.classList.add("overflow-y-hidden");
     } else {
       body.classList.remove("overflow-y-hidden");
-    } */
+    } 
   }, [playText]);
 
   const [classname, setClassname] = useState("");
