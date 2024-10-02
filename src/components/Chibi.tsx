@@ -86,7 +86,9 @@ export default function Modelsx() {
 
   useEffect(() => {
     console.log('holaxd');
-    if (glbRef.current && mixersRef.current.length > 1) {
+    console.log(glbRef.current);
+    console.log(mixersRef.current)
+    if (glbRef.current && mixersRef.current) {
       console.log('hola');
   console.log(clipname)
       const mixer = mixersRef.current[1];
