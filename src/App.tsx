@@ -27,7 +27,7 @@ function App() {
     let timeoutId;
 
     timeoutId = setTimeout(() => {
-      setPlayText(true);
+   /*    setPlayText(true); */
       setClipname(10);
       setIsVisible(false);
      /*  setClassname("hidden"); */
