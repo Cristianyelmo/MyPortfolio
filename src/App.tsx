@@ -21,7 +21,7 @@ function App() {
     scrollToTop,
   } = MainHook();
 
-  const body = document.body;
+ /*  const body = document.body; */
 
   useEffect(() => {
     let timeoutId;
