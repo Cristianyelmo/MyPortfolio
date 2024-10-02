@@ -13,7 +13,7 @@ function AboutMe() {
   }, [visibility.sobreMi]); 
 
   return (
-    <div   ref={elementRefs.sobreMi}  id="sobreMi" className="min-h-screen xd">
+    <div   ref={elementRefs.sobreMi}  id="sobreMi" className="min-h-screen">
 
 
 <h1 className="text-white glow-text text-center text-4xl">Sobre mi</h1>
