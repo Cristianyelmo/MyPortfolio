@@ -6,17 +6,16 @@ import { MainHook } from "../Context/MainContext";
 export default function Modelsx() {
   const modelRef = useRef(null);
   const mixersRef = useRef<THREE.AnimationMixer[]>([]);
- 
+
   const clock = useRef(new THREE.Clock());
   interface GLTFModel {
     animations: THREE.AnimationClip[];
     scene: THREE.Scene;
   }
-  
 
   const glbRef = useRef<GLTFModel | null>(null);
-  
-  const { clipname, setClipname, playText, textChibi, setIsVisible} =
+
+  const { clipname, setClipname, playText, textChibi, setIsVisible } =
     MainHook();
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -85,24 +84,22 @@ export default function Modelsx() {
   }, []);
 
   useEffect(() => {
-    if (glbRef.current && mixersRef.current.length > 1) { 
-      console.log('hola');
-  
-    
+    if (glbRef.current && mixersRef.current.length > 1) {
       const mixer = mixersRef.current[1];
-  
-     
-      if (glbRef.current.animations && glbRef.current.animations.length > clipname) {
+
+      if (
+        glbRef.current.animations &&
+        glbRef.current.animations.length > clipname
+      ) {
         const action = mixer.clipAction(glbRef.current.animations[clipname]);
-  
-       
+
         mixer.stopAllAction();
-        action.reset().fadeIn(0.5).play(); 
+        action.reset().fadeIn(0.5).play();
       } else {
         console.error("Invalid clipname or no animations available");
       }
     }
-  }, [clipname]); 
+  }, [clipname]);
 
   const timeoutDelay = textChibi.length * 50 + 1500;
 
@@ -111,7 +108,6 @@ export default function Modelsx() {
 
     const timeoutId = setTimeout(() => {
       setClipname(6);
-     
     }, timeoutDelay);
 
     return () => {
