@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+/* import { useEffect } from "react";
 import useVisibilityTracker from '../hooks/useIsVisible';
 import { MainHook } from "../Context/MainContext";
-
+ */
 function Contact() {
-  const {visibility, elementRefs} = useVisibilityTracker();;
+/*   const {visibility, elementRefs} = useVisibilityTracker();;
   const { setTextchibi } = MainHook();
   useEffect(() => {
     if (visibility.contacto) {
@@ -12,10 +12,10 @@ function Contact() {
         "este es mi redes de contacto donde puedas ver mi perfiles y darme trabajo a jajaj"
       );
     }
-  }, [visibility.contacto]);
+  }, [visibility.contacto]); */
 
   return (
-    <div ref={elementRefs.contacto} id="contacto" className=" mt-20  content-center">
+    <div /* ref={elementRefs.contacto} */ id="contacto" className=" mt-20 h-screen content-center">
       <h1 className="text-white glow-text text-center text-4xl">Contacto</h1>
 
       <div className="relative md:top-[-30%] z-10">

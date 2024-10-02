@@ -1,10 +1,10 @@
 
-
+/* 
 import useVisibilityTracker from '../hooks/useIsVisible';
 import { MainHook } from "../Context/MainContext";
-import { useEffect } from 'react';
+import { useEffect } from 'react'; */
 function Presentation() {
-
+/* 
   const {visibility, elementRefs} = useVisibilityTracker();;
   const {setTextchibi} = MainHook()
   useEffect(() => {
@@ -14,11 +14,11 @@ function Presentation() {
       setTextchibi('hola como estan mi nombre es mono,y voy a mostrarte cada detalle de mi portfolio.En cada seccion puedes pulsar PLAY para que te cuente mas detalles y STOP para parar y seguir scrolleando.Pulsa STOP para parar el dialogo y seguir scrolleando :)')
    
     }
-  }, [visibility.presentacion]);
+  }, [visibility.presentacion]); */
 
 
   return (
-    <div ref={elementRefs.presentacion} id="presentacion"  className=" pt-10  flex justify-center items-center">
+    <div /* ref={elementRefs.presentacion} */ id="presentacion"  className="h-screen pt-10  flex justify-center items-center">
   
 
 <section className="text-white glow-text text-xl">

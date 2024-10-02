@@ -81,7 +81,7 @@ function App() {
 
 
   return (
-    <div className="h-screen">
+    <div className="">
      {/*  {classname !== "hidden" && (
         <div
           className={`fixed ${classname} z-50 black-background inset-0 bg-black flex justify-center items-center text-white text-center`}
