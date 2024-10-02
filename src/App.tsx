@@ -82,7 +82,7 @@ function App() {
 
   return (
     <div>
-      {classname !== "hidden" && (
+     {/*  {classname !== "hidden" && (
         <div
           className={`fixed ${classname} z-50 black-background inset-0 bg-black flex justify-center items-center text-white text-center`}
         >
@@ -91,8 +91,8 @@ function App() {
         </div>
     
 
-      )}
-      <Modelsx />
+      )} */}
+      {/* <Modelsx />
 
       <div className="flex index-button flex-col space-y-4 text-white p-3 fixed bottom-4 right-4">
         {isVisible && (
@@ -116,7 +116,7 @@ function App() {
         <div className="breakP z-50 bg-black/70 glow-effect text-white max-w-[900px] min-h-[100px] p-4 fixed bottom-4 md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center">
           <Typewriter text={textChibi} speed={50} />
         </div>
-      )}
+      )} */}
 
       <Presentation />
       <AboutMe />
