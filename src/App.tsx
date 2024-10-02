@@ -1,6 +1,6 @@
 import "./App.css";
 /* import Presentation from "./components/Presentation"; */
-import AboutMe from "./components/AboutMe";
+/* import AboutMe from "./components/AboutMe"; */
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -119,7 +119,7 @@ function App() {
       )} */}
 
      {/*  <Presentation /> */}
-      <AboutMe />
+    {/*   <AboutMe /> */}
       <Technologies />
       <Projects />
       <Contact />
