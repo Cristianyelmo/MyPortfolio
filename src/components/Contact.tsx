@@ -15,7 +15,7 @@ function Contact() {
   }, [visibility.contacto]); 
 
   return (
-    <div ref={elementRefs.contacto}  id="contacto" className=" mt-20 h-screen content-center">
+    <div ref={elementRefs.contacto}  id="contacto" /* className=" mt-20 h-screen content-center" */>
       <h1 className="text-white glow-text text-center text-4xl">Contacto</h1>
 
       <div className="relative md:top-[-30%] z-10">
