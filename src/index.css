@@ -87,5 +87,5 @@ animation:inicio 1s forwards;
 
 body, html {
   will-change: scroll-position;
-  transform: translateZ(0); 
+  /* transform: translateZ(0); */  /* Eliminar esta línea */
 }
