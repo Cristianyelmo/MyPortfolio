@@ -10,7 +10,6 @@ export default function Modelsx() {
   const clock = useRef(new THREE.Clock());
   interface GLTFModel {
     animations: THREE.AnimationClip[];
-    scene: THREE.Scene;
   }
 
   const glbRef = useRef<GLTFModel | null>(null);
@@ -55,7 +54,7 @@ export default function Modelsx() {
         if (gltf.animations && gltf.animations.length > 0) {
           const mixer = new THREE.AnimationMixer(model);
 
-          const action = mixer.clipAction(gltf.animations[6]);
+          const action = mixer.clipAction(gltf.animations[clipname]);
           /*  action.play();  */
           action.reset().fadeIn(0.5).play();
 
