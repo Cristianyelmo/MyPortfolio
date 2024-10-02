@@ -1,7 +1,7 @@
 import "./App.css";
 import Presentation from "./components/Presentation"; 
-/* import AboutMe from "./components/AboutMe";   */
-/*  import Technologies from "./components/Technologies"; */
+ import AboutMe from "./components/AboutMe";   
+ import Technologies from "./components/Technologies"; 
 import Projects from "./components/Projects";
 import Contact from "./components/Contact"; 
 import Modelsx from "./components/Chibi"; 
@@ -119,10 +119,9 @@ Playbutton,
       )} 
 
        <Presentation /> 
- {/*     <AboutMe />  */} 
-   {/*     <Technologies /> */}
-      <Projects />
-      <Projects />
+     <AboutMe />  
+        <Technologies /> 
+ 
       <Projects />
       <Contact /> 
     </>
