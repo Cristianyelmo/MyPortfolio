@@ -1,43 +1,43 @@
 import "./App.css";
-import Presentation from "./components/Presentation"; 
-/*  import AboutMe from "./components/AboutMe";    */
- import Technologies from "./components/Technologies"; 
+import Presentation from "./components/Presentation";
+import AboutMe from "./components/AboutMe";
+import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact"; 
-import Modelsx from "./components/Chibi"; 
+import Contact from "./components/Contact";
+import Modelsx from "./components/Chibi";
 import { MainHook } from "./Context/MainContext";
 import { useEffect, useState } from "react";
- import Typewriter from "./components/Typewriter"; 
+import Typewriter from "./components/Typewriter";
 
 function App() {
   const {
-textChibi, 
+    textChibi,
     playText,
-Playbutton, 
-  setPlayText, 
+    Playbutton,
+    setPlayText,
     setClipname,
- isVisible, 
+    isVisible,
     setIsVisible,
-   scrollToTop, 
+    scrollToTop,
   } = MainHook();
 
   const body = document.body;
 
- useEffect(() => {
+  useEffect(() => {
     let timeoutId;
 
     timeoutId = setTimeout(() => {
-    setPlayText(true); 
+      setPlayText(true);
       setClipname(10);
       setIsVisible(false);
-     setClassname("hidden"); 
+      setClassname("hidden");
     }, 1800);
 
     return () => {
       clearTimeout(timeoutId);
     };
   }, []);
- 
+
   useEffect(() => {
     if (playText) {
       body.classList.add("overflow-y-hidden");
@@ -46,14 +46,14 @@ Playbutton,
     }
   }, [playText]);
 
- const [classname, setClassname] = useState(""); 
+  const [classname, setClassname] = useState("");
 
   useEffect(() => {
     let timeoutId;
 
     timeoutId = setTimeout(() => {
-     setClassname("test"); 
-    /*   document.body.style.backgroundImage = "url('/Motivo.webp')";
+      setClassname("test");
+      /*   document.body.style.backgroundImage = "url('/Motivo.webp')";
       document.body.style.backgroundRepeat = "repeat";
       document.body.style.backgroundSize = "auto";  */
     }, 1000);
@@ -63,35 +63,15 @@ Playbutton,
     };
   }, []);
 
-
-
-
-
-
-
-
-  
-
-
-  
- 
-
-
-
-
-
   return (
     <>
-       {classname !== "hidden" && (
+      {classname !== "hidden" && (
         <div
           className={`fixed ${classname} z-50 black-background inset-0 bg-black flex justify-center items-center text-white text-center`}
         >
-        <p> cargando...</p> 
-        
+          <p> cargando...</p>
         </div>
-    
-
-      )} 
+      )}
       <Modelsx />
 
       <div className="flex index-button flex-col space-y-4 text-white p-3 fixed bottom-4 right-4">
@@ -116,19 +96,17 @@ Playbutton,
         <div className="breakP z-50 bg-black/70 glow-effect text-white max-w-[900px] min-h-[100px] p-4 fixed bottom-4 md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center">
           <Typewriter text={textChibi} speed={50} />
         </div>
-      )} 
+      )}
 
-       <Presentation /> 
-       
-   {/*   <AboutMe />   */}
-     
-       <Technologies />  
-       
+      <Presentation />
+
+      <AboutMe />
+
+      <Technologies />
+
       <Projects />
-  
-   
-      <Contact /> 
-     
+
+      <Contact />
     </>
   );
 }
