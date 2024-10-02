@@ -1,21 +1,21 @@
 import { MainHook } from "../Context/MainContext";
-/* import { useEffect } from "react";
-import useVisibilityTracker from '../hooks/useIsVisible'; */
+ import { useEffect } from "react";
+import useVisibilityTracker from '../hooks/useIsVisible'; 
 
 
 function Technologies() {
 
-const {Technologies/* ,setTextchibi */} = MainHook()
-/* const {visibility, elementRefs} = useVisibilityTracker();;
+const {Technologies ,setTextchibi } = MainHook()
+ const {visibility, elementRefs} = useVisibilityTracker();;
 
 useEffect(() => {
   if (visibility.tecnologias) {
     console.log("El componente Contacto está visible en pantalla");
     setTextchibi('Las tecnologias')
   }
-}, [visibility.tecnologias]); */
+}, [visibility.tecnologias]); 
   return (
-    <div /* ref={elementRefs.tecnologias} */ id="tecnologias" className="min-h-screen">
+    <div ref={elementRefs.tecnologias}  id="tecnologias" className="min-h-screen">
   
 
 <h1 className="text-white glow-text text-center text-4xl">Tecnologias</h1>

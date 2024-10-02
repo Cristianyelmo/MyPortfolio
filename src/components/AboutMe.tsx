@@ -1,8 +1,8 @@
-/* import { useEffect } from "react";
+import { useEffect } from "react";
 import useVisibilityTracker from '../hooks/useIsVisible';
-import { MainHook } from "../Context/MainContext"; */
+import { MainHook } from "../Context/MainContext"; 
 function AboutMe() {
-  /* const {visibility, elementRefs} = useVisibilityTracker();;
+   const {visibility, elementRefs} = useVisibilityTracker();;
   const {setTextchibi} = MainHook()
   useEffect(() => {
     if (visibility.sobreMi) {
@@ -10,10 +10,10 @@ function AboutMe() {
       
       setTextchibi('esta parte habla sobre mi,aunque siempre busco aprender de manera FullStack,cuando busque trabajo siempre sentia que mi fuerte era en Front-End')
     }
-  }, [visibility.sobreMi]); */
+  }, [visibility.sobreMi]); 
 
   return (
-    <div   /* ref={elementRefs.sobreMi} */ id="sobreMi" className="min-h-screen">
+    <div   ref={elementRefs.sobreMi}  id="sobreMi" className="min-h-screen">
 
 
 <h1 className="text-white glow-text text-center text-4xl">Sobre mi</h1>

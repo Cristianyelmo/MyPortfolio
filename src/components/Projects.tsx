@@ -1,28 +1,28 @@
 import { MainHook } from "../Context/MainContext";
 import Resizable from "./Carousel";
-/* import useVisibilityTracker from '../hooks/useIsVisible';
-import { useEffect } from "react"; */
+ import useVisibilityTracker from '../hooks/useIsVisible';
+import { useEffect } from "react"; 
 function Projects() {
-/*    const {visibility, elementRefs} = useVisibilityTracker();; */
+  const {visibility, elementRefs} = useVisibilityTracker();
 const {valueProject,openModal, videoRef,
   closeProjectModal} = MainHook() 
-/*  const {setTextchibi} = MainHook() */
-/* useEffect(() => {
+const {setTextchibi} = MainHook() 
+ useEffect(() => {
   if (visibility.proyectos) {
     console.log("El componente Contacto está visible en pantalla proyectos");
 
     setTextchibi('esta parte es de mi proyectos,estan subidos desde Vercel,me enfoque que sea para portfolio asi que no tiene registro ni inicio de sesion')
   
-  }
-}, [visibility.proyectos]); */
+  
+}}, [visibility.proyectos]); 
 
 
 const href = valueProject && valueProject.Link;
 
 
-/* const isGrid = valueProject?.tecnologias.length && valueProject?.tecnologias.length > 7; */
+/* const isGrid = valueProject?.tecnologias.length && valueProject?.tecnologias.length > 7;  */
   return (
-    <div /* ref={elementRefs.proyectos} */ id="proyectos" className="h-screen ">
+    <div  ref={elementRefs.proyectos} id="proyectos" className="h-screen ">
  
 { openModal && <div className="fixed inset-0 flex flex-col space-y-4 items-center justify-center bg-black bg-opacity-70 index-button">
  <div className="flex justify-end">

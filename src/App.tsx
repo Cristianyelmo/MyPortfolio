@@ -119,7 +119,7 @@ function App() {
       )} */}
 
        <Presentation /> 
-      <AboutMe /> 
+    {/*   <AboutMe />  */}
       <Technologies />
       <Projects />
       <Contact />
