@@ -75,7 +75,8 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
     { name: "Figma", image: "Figma" },
     { name: "Next Js", image: "Next Js" },
     { name: "PHP", image: "PHP" },
-    { name: "Vite", image: "Vite" }
+    { name: "Vite", image: "Vite" },
+    { name: "Typescript", image: "Typescript" }
   ];
 
   const ArrayProject = [
@@ -110,7 +111,7 @@ export const MainProvider: React.FC<MyProviderProps> = ({ children }) => {
       texto: "Intensamente, es un proyecto inspirado en la película donde te puedes sacar fotomatones y te detecta la emoción de tu rostro. Está hecha con la API de IA Face API",
       Link: "https://intensamente-sable.vercel.app/",
       marco: "marco1-2 (5)",
-      tecnologias: ["Javascript","React","Figma","Vite"]
+      tecnologias: ["Javascript","React","Figma","Vite","Typescript"]
     },
   ];
 
