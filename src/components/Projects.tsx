@@ -35,7 +35,7 @@ const href = valueProject && valueProject.Link;
     </div>
   <div className="relative  glow-effect p-2">
     <video ref={videoRef} width="640" height="640" controls autoPlay className="relative z-10">
-      <source src={`/${valueProject && valueProject.name}.mp4`} type="video/mp4" />
+      <source src={`/videos/${valueProject && valueProject.name}.mp4`} type="video/mp4" />
       Tu navegador no soporta la etiqueta de video.
     </video>
   
@@ -43,13 +43,13 @@ const href = valueProject && valueProject.Link;
   <div className={`flex`}>
   {valueProject && valueProject.tecnologias.map((item,index)=>(
     <div  key={index} className="grid-item">
-    <img src={`${item}.webp`} alt="" width={50} height={50}/>
+    <img src={`/icons/${item}.webp`} alt="" width={50} height={50}/>
     </div>
   ))}
   
 
   </div>
-  <p className="text-white glow-text max-w-[640px] breakP text-center">{valueProject?.texto}</p>
+  <p className="text-white glow-text max-w-[640px] breakP text-center font2">{valueProject?.texto}</p>
   <a className="bg-black text-white p-3" target="_blank"   href={href || (valueProject ? valueProject.Link : "#")}>Ver Demo</a>
 </div> }
     

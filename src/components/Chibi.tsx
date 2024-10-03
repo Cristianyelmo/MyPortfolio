@@ -3,7 +3,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import * as THREE from "three";
 import { MainHook } from "../Context/MainContext";
 
-export default function Modelsx() {
+export default function Chibi() {
   const modelRef = useRef(null);
   const mixersRef = useRef<THREE.AnimationMixer[]>([]);
 
@@ -34,13 +34,11 @@ export default function Modelsx() {
 
       renderer.setSize(width, height);
       container && container.appendChild(renderer.domElement);
-      if (window.innerWidth < 600) {
-        renderer.setPixelRatio(window.devicePixelRatio * 0.5);
-      }
+    
       camera.position.set(2, 2, 68);
 
       const loader = new GLTFLoader();
-      loader.load("/caca.glb", function (gltf: any) {
+      loader.load("/chibi.glb", function (gltf: any) {
         const model = gltf.scene;
         model.scale.set(9, 9, 9);
         modelRef.current = model;
@@ -48,13 +46,17 @@ export default function Modelsx() {
 
         scene.add(model);
 
-        const ambientLight = new THREE.AmbientLight(0xffffff, 4); // Lower intensity
+        const ambientLight = new THREE.AmbientLight(0xffffff, 4); 
         scene.add(ambientLight);
 
-        if (glbRef.current && glbRef.current.animations && glbRef.current.animations.length > 0) {
+        if (
+          glbRef.current &&
+          glbRef.current.animations &&
+          glbRef.current.animations.length > 0
+        ) {
           const mixer = new THREE.AnimationMixer(model);
 
-          const action = mixer.clipAction(glbRef.current.animations[clipname]);
+          const action = mixer.clipAction(glbRef.current.animations[6]);
           /*  action.play();  */
           action.reset().fadeIn(0.5).play();
 
@@ -82,23 +84,14 @@ export default function Modelsx() {
     }
   }, []);
 
-
-
   useEffect(() => {
-    console.log('holaxd');
-    console.log(glbRef.current);
-    console.log(mixersRef.current)
     if (glbRef.current && mixersRef.current) {
-      console.log('hola');
-  console.log(clipname)
-      const mixer = mixersRef.current[0];
-  
-      // Use the proper type assertion for animations
+      const mixer = mixersRef.current[1];
+
       const animations = glbRef.current.animations;
       if (animations && animations.length > clipname) {
         const action = mixer.clipAction(animations[clipname]);
-  
-        // Stop any currently playing animation
+
         mixer.stopAllAction();
         action.reset().fadeIn(0.5).play();
       } else {

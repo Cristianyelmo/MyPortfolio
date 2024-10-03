@@ -4,13 +4,23 @@
 
 
 @font-face {
-  font-family: 'Aexir';
-  src: url('/public/Font/Aexir.otf') format('opentype');
+  font-family: 'Orbitron-VariableFont';
+  src: url('/public/Font/Orbitron-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 
+@font-face {
+  font-family: 'Aexir';
+  src: url('/public/Font/Aexir.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font2{
+  font-family: 'Orbitron-VariableFont', sans-serif;
+}
 
 
 

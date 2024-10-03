@@ -11,7 +11,7 @@ const {Technologies ,setTextchibi } = MainHook()
 useEffect(() => {
   if (visibility.tecnologias) {
     console.log("El componente Contacto está visible en pantalla");
-    setTextchibi('Las tecnologias')
+    setTextchibi('Las tecnologias que conozco son centradas en Javascript,ya que me enfoque')
   }
 }, [visibility.tecnologias]); 
   return (
@@ -23,7 +23,7 @@ useEffect(() => {
 {
    Technologies && Technologies.map((tech,index)=>(
     <div className="flex flex-col text-center items-center text-white glow-text" key={index}>
-      <img src={tech.image} alt="" width={150} height={150}/>
+      <img src={`/icons/${tech.image}.webp`} alt="" width={150} height={150}/>
       <p>{tech.name}</p>
     </div>
    ))

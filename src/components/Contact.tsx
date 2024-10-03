@@ -50,21 +50,21 @@ function Contact() {
               target="__blank"
             >
               <img
-                src="/Linkedin.webp"
+                src="/icons/Linkedin.webp"
                 alt=""
                 className="w-[80px] h-[80px] md:w-[200px] md:h-[200px]"
               />
             </a>
             <a href="https://www.behance.net/cristiaamarill" target="__blank">
               <img
-                src="/Behance.webp"
+                src="/icons/Behance.webp"
                 alt=""
                 className="w-[80px] h-[80px] md:w-[200px] md:h-[200px]"
               />
             </a>
             <a href="https://github.com/Cristianyelmo" target="__blank">
               <img
-                src="/Github.webp"
+                src="/icons/Github.webp"
                 alt=""
                 className="w-[80px] h-[80px] md:w-[200px] md:h-[200px]"
               />

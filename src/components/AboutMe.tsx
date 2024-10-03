@@ -26,7 +26,7 @@ function AboutMe() {
           <img src="/marco1.webp" alt="decorative" width={453} height={600} className="z-10 w-[453px]" />
         </div>
         <div className="bg-black/40 glow-effect max-w-[500px] z-20 h-full text-center flex justify-center items-center p-3 m-3">
-          <p className="text-white glow-text">
+          <p className="text-white glow-text font2">
             Hace más de un año que estoy en este camino de la programación, estudié en Digital House gracias a la beca de
             Formar y desde ahí seguí mi camino autodidacta haciendo proyectos propios. En marzo pude conseguir mi primer
             trabajo como programador Front-End aunque duró solo 2 meses, tuve una experiencia buena y sigo manteniendo

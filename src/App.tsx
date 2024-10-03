@@ -4,10 +4,10 @@ import AboutMe from "./components/AboutMe";
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Modelsx from "./components/Chibi";
 import { MainHook } from "./Context/MainContext";
 import { useEffect, useState } from "react";
 import Typewriter from "./components/Typewriter";
+import Chibi from "./components/Chibi";
 
 function App() {
   const {
@@ -72,7 +72,7 @@ function App() {
           <p> cargando...</p>
         </div>
       )}
-      <Modelsx />
+      <Chibi />
 
       <div className="flex index-button flex-col space-y-4 text-white p-3 fixed bottom-4 right-4">
         {isVisible && (
@@ -93,7 +93,7 @@ function App() {
       </div>
 
       {playText && (
-        <div className="breakP z-50 bg-black/70 glow-effect text-white max-w-[900px] min-h-[100px] p-4 fixed bottom-4 md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center">
+        <div className="breakP z-50 bg-black/70 glow-effect text-white max-w-[900px] min-h-[100px] p-4 fixed bottom-4 md:left-1/2 md:transform md:-translate-x-1/2 flex items-center justify-center font2">
           <Typewriter text={textChibi} speed={50} />
         </div>
       )}
