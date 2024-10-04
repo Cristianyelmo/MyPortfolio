@@ -86,7 +86,7 @@ export default function Chibi() {
 
   useEffect(() => {
     if (glbRef.current && mixersRef.current) {
-      const mixer = mixersRef.current[1];
+      const mixer = mixersRef.current[0];
 
       const animations = glbRef.current.animations;
       if (animations && animations.length > clipname) {
