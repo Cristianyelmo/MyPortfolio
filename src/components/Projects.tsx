@@ -11,7 +11,7 @@ const {setTextchibi} = MainHook()
   if (visibility.proyectos) {
     console.log("El componente Contacto está visible en pantalla proyectos");
 
-    setTextchibi('esta parte es de mi proyectos,estan subidos desde Vercel,me enfoque que sea para portfolio asi que no tiene registro ni inicio de sesion')
+    setTextchibi('Los proyectos están enfocados para portafolio, por eso no tienen ni registro ni inicio de sesión.')
   
   
 }}, [visibility.proyectos]); 

@@ -9,7 +9,7 @@ function Contact() {
     if (visibility.contacto) {
       console.log("El componente Contacto está visible en pantalla");
       setTextchibi(
-        "este es mi redes de contacto donde puedas ver mi perfiles y darme trabajo a jajaj"
+        "Estas son las redes de contacto por donde puedes comunicarte con él. Muchas gracias por ver este portafolio. :)"
       );
     }
   }, [visibility.contacto]); 

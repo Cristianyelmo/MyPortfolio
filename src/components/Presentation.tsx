@@ -11,7 +11,7 @@ function Presentation() {
       );
 
       setTextchibi(
-        "hola como estan mi nombre es mono,y voy a mostrarte cada detalle de mi portfolio.En cada seccion puedes pulsar PLAY para que te cuente mas detalles y STOP para parar y seguir scrolleando.Pulsa STOP para parar el dialogo y seguir scrolleando :)"
+        "Hola, ¿cómo están? Mi nombre es Anascript, y voy a mostrarte cada detalle del portafolio. En cada sección puedes pulsar PLAY para que te cuente más detalles y STOP para parar y seguir scrolleando. Pulsa STOP para parar el diálogo y seguir scrolleando. :)"
       );
     }
   }, [visibility.presentacion]);

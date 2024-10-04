@@ -10,7 +10,7 @@ function AboutMe() {
     if (visibility.sobreMi) {
       console.log("El componente Contacto está visible en pantalla sobre mi");
       setTextchibi(
-        'esta parte habla sobre mi, aunque siempre busco aprender de manera FullStack, cuando busque trabajo siempre sentia que mi fuerte era en Front-End'
+        'Aunque siempre busca aprender de manera FullStack, cuando buscó trabajo, la mayoría sentía que su fuerte era en Front-End.'
       );
     }
   }, [visibility.sobreMi, setTextchibi]);
@@ -28,7 +28,7 @@ function AboutMe() {
           <img src="/marco1.webp" alt="decorative" width={453} height={600} className="z-10 w-[453px]" /> 
           <img src="/xc (1).webp" alt="" width={300} height={300} className="z-20"/>
         </div> */}
-        <img src="/xc (1).webp" alt="" width={300} height={300} className="z-20"/>
+        <img src="/perfil.webp" alt="" width={300} height={300} className="z-20"/>
         <div className="bg-black/40 glow-effect max-w-[500px] z-20 h-full text-center flex justify-center items-center p-3 m-3">
           <p className="text-white glow-text font2">
             Hace más de un año que estoy en este camino de la programación, estudié en Digital House gracias a la beca de

@@ -11,7 +11,7 @@ const {Technologies ,setTextchibi } = MainHook()
 useEffect(() => {
   if (visibility.tecnologias) {
     console.log("El componente Contacto está visible en pantalla");
-    setTextchibi('Las tecnologias que conozco son centradas en Javascript,ya que me enfoque')
+    setTextchibi('Las tecnologías que conoce están centradas en JavaScript y tiene conocimiento de PHP. En un futuro, quiere aprender lenguaje como JAVA o C# y Framework como Angular.')
   }
 }, [visibility.tecnologias]); 
   return (
