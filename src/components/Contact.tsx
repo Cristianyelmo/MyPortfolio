@@ -39,7 +39,7 @@ function Contact() {
         <div className="flex flex-col self-center z-20">
           <a
             target="__blank"
-            href="/Amarilla-Cristian-CV-Desarrollo-web full-stack (2).pdf"
+            href="/Amarilla Cristian-Desarrollo Web Full Stack.pdf"
             className="bg-black/50 p-4  glow-effect text-white text-center glow-text mb-10"
           >
             Descargar CV
